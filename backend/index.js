@@ -3,22 +3,15 @@ import http from 'http'
 import WebSocket from 'ws'
 import express from 'express'
 import path from 'path'
-import {v4 as uuid} from 'uuid'
+import { v4 as uuid } from 'uuid'
 // import uuid from "uuid"
 import mongo from './mongo.js'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-
+import { fork } from 'child_process'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-// const mongoose = require('mongoose');
-// const http = require('http');
-// const WebSocket = require('ws');
-// const express = require('express');
-// const path = require('path');
-// const uuid = require('uuid');
 
-// const mongo = require('./mongo');
 
 const app = express();
 
@@ -28,11 +21,15 @@ const app = express();
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  name: { type: String, required: true },
-  chatBoxes: [{ type: mongoose.Types.ObjectId, ref: 'ChatBox' }],
+  id: { type: String, ref: "Id" },
+  name: { type: String, required: true, ref: "Name" },
+  gender: { type: String, ref: "Gender" },
+  age: { type: Number, ref: "Age" },
+  married: { type: String, ref: "Married" },
+  occupation: { type: String, ref: "Ocuppation" }
 });
 
-const messageSchema = new Schema({
+/*const messageSchema = new Schema({
   chatBox: { type: mongoose.Types.ObjectId, ref: 'ChatBox' },
   sender: { type: mongoose.Types.ObjectId, ref: 'User' },
   body: { type: String, required: true },
@@ -42,11 +39,11 @@ const chatBoxSchema = new Schema({
   name: { type: String, required: true },
   users: [{ type: mongoose.Types.ObjectId, ref: 'User' }],
   messages: [{ type: mongoose.Types.ObjectId, ref: 'Message' }],
-});
+});*/
 
 const UserModel = mongoose.model('User', userSchema);
-const ChatBoxModel = mongoose.model('ChatBox', chatBoxSchema);
-const MessageModel = mongoose.model('Message', messageSchema);
+/*const ChatBoxModel = mongoose.model('ChatBox', chatBoxSchema);
+const MessageModel = mongoose.model('Message', messageSchema);*/
 
 /* -------------------------------------------------------------------------- */
 /*                                  UTILITIES                                 */
@@ -80,19 +77,20 @@ const validateChatBox = async (name, participants) => {
     .populate({ path: 'messages', populate: 'sender' })
     .execPopulate();
 };
+const InitForCluster = () => {
+  let child = [];
+  const subProcess = fork(path.join(__dirname, 'child.js'), [0]);
+  subProcess.on('message', (data) => {
+    console.log(`父行程接收到訊息 -> ${data}`)
+  })
+  subProcess.on('error', (err) => {
+    console.error(err)
+  })
+  child.push(subProcess);
+  return child;
+}
 
-// (async () => {
-//   const a = await validateUser('a');
-//   const b = await validateUser('b');
-
-//   console.log(a);
-
-//   const cbName = makeName('a', 'b');
-
-//   const chatBox = await validateChatBox(cbName, [a, b]);
-
-//   console.log(chatBox);
-// })();
+const child = InitForCluster();
 
 const chatBoxes = {}; // keep track of all open AND active chat boxes
 
@@ -103,14 +101,16 @@ wss.on('connection', function connection(client) {
   client.sendEvent = (e) => client.send(JSON.stringify(e));
 
   client.on('message', async function incoming(message) {
-    message = JSON.parse(message);
+    console.log('message!')
+    child[0].send('new message')
+    /*message = JSON.parse(message);
     // console.log(message)
     const [type, payload] = message;
 
     switch (type) {
       // on open chat box
       case 'CHAT': {
-        const {name, to} = payload;
+        const { name, to } = payload;
 
         const chatBoxName = makeName(name, to);
 
@@ -171,7 +171,7 @@ wss.on('connection', function connection(client) {
           });
         });
       }
-    }
+    }*/
 
     // disconnected
     client.once('close', () => {
@@ -183,15 +183,5 @@ wss.on('connection', function connection(client) {
 mongo.connect();
 
 server.listen(8080, () => {
-  
- 
- 
-for(var i=0; i<3; i++) {
-   var worker_process = child_process.fork("child.js", [i]);    
- 
-   worker_process.on('close', function (code) {
-      console.log('子进程已退出，退出码 ' + code);
-   });
-}
   console.log('Server listening at http://localhost:8080');
 });
