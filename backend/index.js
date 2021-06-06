@@ -22,12 +22,12 @@ const app = express();
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  id: { type: String, ref: "Id" },
-  name: { type: String, required: true, ref: "Name" },
-  gender: { type: String, ref: "Gender" },
-  age: { type: Number, ref: "Age" },
-  married: { type: String, ref: "Married" },
-  occupation: { type: String, ref: "Ocuppation" }
+  id: { type: String, ref: "id" },
+  name: { type: String, required: true, ref: "name" },
+  gender: { type: String, ref: "gender" },
+  age: { type: Number, ref: "age" },
+  married: { type: String, ref: "married" },
+  occupation: { type: String, ref: "ocuppation" }
 });
 
 /*const messageSchema = new Schema({
@@ -66,15 +66,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 const getInitData = async (body) => {
-  let data = await UserModel.find(body);
-  console.log(data)
-  return data
+  const datas = await UserModel.find({Id:1});
+  return datas
 };
 
 const copyMongoData = (childs) => async () => {
   const datas = await UserModel.find({Id: { $lte: 10} });
   //const datas = []
-  console.log('datas', datas,  Math.sqrt(childs.length))
+  // console.log('datas', datas,  Math.sqrt(childs.length))
   const row = Math.sqrt(childs.length);
   for (let i = 0; i < childs.length; i++) {
     childs[i].send(JSON.stringify({
@@ -136,8 +135,8 @@ const total_num = 9
 const childs = InitForCluster(total_num);
 
 const Clients = {}; // keep track of all open AND active chat boxes
-const id = 0
-wss.on('connection', function connection(client) {
+let id = 0
+wss.on('connection', async function connection(client) {
   client.id = id
   id += 1
   client.status = "unsub"
@@ -146,14 +145,13 @@ wss.on('connection', function connection(client) {
 
   client.on('message', async function incoming(message) {
     console.log('server receive message!')
-    
     message = JSON.parse(message);
     // console.log(message)
-    const [type, body] = message;
+    const {type, body} = message;
 
     switch (type) {
       // on open chat box
-      case 'subscription': {
+      case 'query': {
         client.status = "sub"
         const data = getInitData(body)
         client.data = data
