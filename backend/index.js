@@ -79,15 +79,15 @@ const validateUser = async (name) => {
     .execPopulate();
 };*/
 const copyMongoData = (childs) => async () => {
-  const datas = await UserModel.find({ Id: 0 });
+  const datas = await UserModel.find({Id: { $lte: 10} });
   //const datas = []
   console.log('datas', datas,  Math.sqrt(childs.length))
-  const row = i / Math.sqrt(childs.length);
+  const row = Math.sqrt(childs.length);
   for (let i = 0; i < childs.length; i++) {
     childs[i].send(JSON.stringify({
       type: "init",
       data: datas.filter(
-        (data, idx) => (idx % row === i / row))
+        (data, idx) => (idx % row === i % row))
     }))
   }
 }
