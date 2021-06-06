@@ -124,7 +124,7 @@ wss.on('connection', function connection(client) {
 
     switch (type) {
       // on open chat box
-      case 'CHAT': {
+      case 'QUERY': {
         const { name, to } = payload;
 
         const chatBoxName = makeName(name, to);
@@ -156,7 +156,7 @@ wss.on('connection', function connection(client) {
         break;
       }
 
-      case 'MESSAGE': {
+      case 'WRITE': {
         // console.log(payload)
         const {
           name, to, body
