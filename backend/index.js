@@ -9,6 +9,7 @@ import mongo from './mongo.js'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { fork } from 'child_process'
+import { time } from 'console'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -40,8 +41,8 @@ const chatBoxSchema = new Schema({
   users: [{ type: mongoose.Types.ObjectId, ref: 'User' }],
   messages: [{ type: mongoose.Types.ObjectId, ref: 'Message' }],
 });*/
+const UserModel = mongoose.model('population_data', userSchema);
 
-const UserModel = mongoose.model('User', userSchema);
 /*const ChatBoxModel = mongoose.model('ChatBox', chatBoxSchema);
 const MessageModel = mongoose.model('Message', messageSchema);*/
 
@@ -69,28 +70,42 @@ const validateUser = async (name) => {
   return new UserModel({ name }).save();
 };
 
-const validateChatBox = async (name, participants) => {
+/*const validateChatBox = async (name, participants) => {
   let box = await ChatBoxModel.findOne({ name });
   if (!box) box = await new ChatBoxModel({ name, users: participants }).save();
   return box
     .populate('users')
     .populate({ path: 'messages', populate: 'sender' })
     .execPopulate();
-};
-const InitForCluster = () => {
-  let child = [];
-  const subProcess = fork(path.join(__dirname, 'child.js'), [0]);
-  subProcess.on('message', (data) => {
-    console.log(`父行程接收到訊息 -> ${data}`)
-  })
-  subProcess.on('error', (err) => {
-    console.error(err)
-  })
-  child.push(subProcess);
-  return child;
+};*/
+const copyMongoData = (childs) => async () => {
+  const datas = await UserModel.find({ Id: 0 });
+  //const datas = []
+  console.log('datas', datas,  Math.sqrt(childs.length))
+  const row = i / Math.sqrt(childs.length);
+  for (let i = 0; i < childs.length; i++) {
+    childs[i].send(JSON.stringify({
+      type: "init",
+      data: datas.filter(
+        (data, idx) => (idx % row === i / row))
+    }))
+  }
 }
-
-const child = InitForCluster();
+const InitForCluster = (totalNum) => {
+  let childs = [];
+  for (let i = 0; i < totalNum; i++) {
+    const subProcess = fork(path.join(__dirname, 'child.js'), [i]);
+    subProcess.on('message', (data) => {
+      console.log(`父行程接收到訊息 -> ${data}`)
+    })
+    subProcess.on('error', (err) => {
+      console.error(err)
+    })
+    childs.push(subProcess);
+  }
+  return childs;
+}
+const childs = InitForCluster(9);
 
 const chatBoxes = {}; // keep track of all open AND active chat boxes
 
@@ -181,7 +196,7 @@ wss.on('connection', function connection(client) {
 });
 
 mongo.connect();
-
+setTimeout(copyMongoData(childs), 3000);
 server.listen(8080, () => {
   console.log('Server listening at http://localhost:8080');
 });
