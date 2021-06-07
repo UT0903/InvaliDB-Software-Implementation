@@ -41,7 +41,7 @@ const chatBoxSchema = new Schema({
   users: [{ type: mongoose.Types.ObjectId, ref: 'User' }],
   messages: [{ type: mongoose.Types.ObjectId, ref: 'Message' }],
 });*/
-const UserModel = mongoose.model('population_data', userSchema);
+const UserModel = mongoose.model('population_data', userSchema, "Test");
 
 /*const ChatBoxModel = mongoose.model('ChatBox', chatBoxSchema);
 const MessageModel = mongoose.model('Message', messageSchema);*/
@@ -161,7 +161,7 @@ wss.on('connection', async function connection(client) {
           childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
               type:'subscription',
               clientId:client.id,
-              ids: data.filter(x => x.id % Math.sqrt(total_num) == i).map(user => user.id)
+              ids: data.filter(x => parseInt(x.id) % Math.sqrt(total_num) == i).map(user => user.id)
           }))
         }
         break
