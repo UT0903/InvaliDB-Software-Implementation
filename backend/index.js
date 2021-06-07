@@ -22,12 +22,12 @@ const app = express();
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  id: { type: String, ref: "Id" },
-  name: { type: String, required: true, ref: "Name" },
-  gender: { type: String, ref: "Gender" },
-  age: { type: Number, ref: "Age" },
-  married: { type: String, ref: "Married" },
-  occupation: { type: String, ref: "Ocuppation" }
+  id: { type: String, ref: "id" },
+  name: { type: String, required: true, ref: "name" },
+  gender: { type: String, ref: "gender" },
+  age: { type: Number, ref: "age" },
+  married: { type: String, ref: "married" },
+  occupation: { type: String, ref: "ocuppation" }
 });
 
 /*const messageSchema = new Schema({
@@ -64,24 +64,16 @@ const wss = new WebSocket.Server({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const validateUser = async (name) => {
-  const existing = await UserModel.findOne({ name });
-  if (existing) return existing;
-  return new UserModel({ name }).save();
+
+const getInitData = async (body) => {
+  const datas = await UserModel.find({Id:1});
+  return datas
 };
 
-/*const validateChatBox = async (name, participants) => {
-  let box = await ChatBoxModel.findOne({ name });
-  if (!box) box = await new ChatBoxModel({ name, users: participants }).save();
-  return box
-    .populate('users')
-    .populate({ path: 'messages', populate: 'sender' })
-    .execPopulate();
-};*/
 const copyMongoData = (childs) => async () => {
   const datas = await UserModel.find({Id: { $lte: 10} });
   //const datas = []
-  console.log('datas', datas,  Math.sqrt(childs.length))
+  // console.log('datas', datas,  Math.sqrt(childs.length))
   const row = Math.sqrt(childs.length);
   for (let i = 0; i < childs.length; i++) {
     childs[i].send(JSON.stringify({
@@ -91,107 +83,122 @@ const copyMongoData = (childs) => async () => {
     }))
   }
 }
+
+// [
+//   {
+//     user: {
+//         id: 1,
+//       name: "Eason",
+//       gender: "F",
+//       age: 17,
+//       married: 0,
+//       occupation: student
+//     },
+//     clients: [1, 2, 3]
+//   }
+// ]
 const InitForCluster = (totalNum) => {
   let childs = [];
   for (let i = 0; i < totalNum; i++) {
     const subProcess = fork(path.join(__dirname, 'child.js'), [i]);
     subProcess.on('message', (data) => {
-      console.log(`父行程接收到訊息 -> ${data}`)
+        data = JSON.parse(data)
+        console.log(data)
+        const dirtyClients = []
+        data.map(obj => obj.clients.map(client => {
+            dirtyClients.push(client)
+            Clients[`client_${client}`].data.map(x => {
+              if(x.id == obj.user.id){
+                return obj.user.id
+              }
+              return x
+            })
+          }
+        ))
+        for(let clientId in dirtyClients) {
+          let client = Clients[`client_${clientId}`]
+          if(client.status == "sub"){
+              client.sendEvent(JSON.stringify(client.data))
+          }
+        }
     })
+
     subProcess.on('error', (err) => {
       console.error(err)
     })
+
     childs.push(subProcess);
   }
   return childs;
 }
-const childs = InitForCluster(9);
+const total_num = 9
+const childs = InitForCluster(total_num);
 
-const chatBoxes = {}; // keep track of all open AND active chat boxes
-
-wss.on('connection', function connection(client) {
-  client.id = uuid()
-  client.box = ''; // keep track of client's CURRENT chat box
-
+const Clients = {}; // keep track of all open AND active chat boxes
+let id = 0
+wss.on('connection', async function connection(client) {
+  client.id = id
+  id += 1
+  client.status = "unsub"
+  client.data = []; // keep track of client's CURRENT chat box
   client.sendEvent = (e) => client.send(JSON.stringify(e));
 
   client.on('message', async function incoming(message) {
-    console.log('message!')
-    child[0].send('new message')
-    /*message = JSON.parse(message);
+    console.log('server receive message!')
+    message = JSON.parse(message);
     // console.log(message)
-    const [type, payload] = message;
+    const {type, body} = message;
 
     switch (type) {
       // on open chat box
-      case 'QUERY': {
-        const { name, to } = payload;
-
-        const chatBoxName = makeName(name, to);
-
-        const sender = await validateUser(name);
-        const receiver = await validateUser(to);
-        const chatBox = await validateChatBox(chatBoxName, [sender, receiver]);
-
-        // if client was in a chat box, remove that.
-        if (chatBoxes[client.box])
-          // user was in another chat box
-          chatBoxes[client.box].delete(client);
-
-        // use set to avoid duplicates
-        client.box = chatBoxName;
-        if (!chatBoxes[chatBoxName]) chatBoxes[chatBoxName] = new Set(); // make new record for chatbox
-        chatBoxes[chatBoxName].add(client); // add this open connection into chat box
-
-        client.sendEvent({
-          type: 'CHAT',
-          body: {
-            messages: chatBox.messages.map(({ sender: { name }, body }) => ({
-              name,
-              body,
-            })),
-          },
-        });
-
-        break;
+      case 'query': {
+        client.status = "sub"
+        const data = getInitData(body)
+        client.data = data
+        for(let i = 0; i < Math.sqrt(total_num); i++) {
+          childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
+              type:'subscription',
+              clientId:client.id,
+              ids: data.filter(x => x.id % Math.sqrt(total_num) == i).map(user => user.id)
+          }))
+        }
+        break
       }
-
-      case 'WRITE': {
-        // console.log(payload)
-        const {
-          name, to, body
-        } = payload;
-
-        const chatBoxName = makeName(name, to);
-
-        const sender = await validateUser(name);
-        const receiver = await validateUser(to);
-        const chatBox = await validateChatBox(chatBoxName, [sender, receiver]);
-
-        const newMessage = new MessageModel({ sender, body });
-        await newMessage.save();
-
-        chatBox.messages.push(newMessage);
-        await chatBox.save();
-
-        chatBoxes[chatBoxName].forEach((client) => {
-          client.sendEvent({
-            type: 'MESSAGE',
-            body: {
-              message: {
-                name,
-                body,
-              },
-            },
-          });
-        });
+      case 'write': {
+        const {id, change} = body
+        //{id:{id:id}, change:{key:value}}
+        UserModel.where(id).update(change)
+        for(let i = 0; i < Math.sqrt(total_num); i++) {
+          if(id.id % Math.sqrt(total_num) != i){
+            continue
+          }
+          childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
+              type: 'write',
+              modify: {id, change}
+          }))
+        }
+        break
       }
-    }*/
-
+      case 'unsubscription': {
+        client.status = "unsub"
+        childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
+          type: 'unsubscription',
+          clientId: client.id
+        }))
+        break
+      }
+    }
+       
     // disconnected
     client.once('close', () => {
-      chatBoxes[client.box].delete(client);
+      childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
+        type: 'unsubscription',
+        clientId: client.id
+      }))
+      delete Clients[`client_${client.id}`]
     });
+
+    Clients[`client_${client.id}`] = client
   });
 });
 

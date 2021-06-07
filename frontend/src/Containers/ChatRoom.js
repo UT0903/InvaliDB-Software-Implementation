@@ -1,11 +1,13 @@
 import "../App.css";
 import { useState } from "react";
+
 import { Table, Input, InputNumber, Popconfirm, Form, Typography } from 'antd';
 import EditTable from "../Components/Table"
-const client = new WebSocket('ws://localhost:8080')
+const client = new WebSocket('ws://140.112.30.36:8080')
+
 const ChatRoom = ({ me, displayStatus }) => {
-  /*const temp = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  const [data, setData] = useState(temp.map((i) => ({
+  //const temp = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  /*const [data, setData] = useState(temp.map((i) => ({
     Id: i.toString(),
     key: i.toString(),
     Gender: 'male',
@@ -14,13 +16,22 @@ const ChatRoom = ({ me, displayStatus }) => {
     Married: 'no',
     Ocuppation: 'blablabla'
   })));*/
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [messageInput, setMessageInput] = useState("");
-
   client.onmessage = (byteString) => {
     const { data } = byteString
-
-    setData(JSON.parse(data))
+    const parsed = JSON.parse(data)
+    const parsedd = JSON.parse(parsed)
+    console.log('recv data:', parsedd, typeof (parsedd))
+    setData(parsedd.map((x) => ({
+      Id: x.id,
+      key: x.id,
+      Gender: x.gender,
+      Name: x.name,
+      Age: x.age,
+      Married: x.married,
+      Ocuppation: x.ocuppation
+    })))
   }
   const modifyTableData = (newData, index) => {
     setData(newData);
@@ -30,7 +41,14 @@ const ChatRoom = ({ me, displayStatus }) => {
         id: {
           id: newData[index].Id
         },
-        change: newData[index]
+        change: {
+          id: newData[index].Id,
+          gender: newData[index].Gender,
+          name: newData[index].Name,
+          age: newData[index].Age,
+          married: newData[index].Married,
+          ocuppation: newData[index].Ocuppation
+        }
       }
     });
   }
@@ -64,7 +82,7 @@ const ChatRoom = ({ me, displayStatus }) => {
           }
           sendData({
             type: "query",
-            body: messageInput
+            body: msg
           });
           setMessageInput("");
         }}
