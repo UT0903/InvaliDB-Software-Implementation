@@ -3,9 +3,10 @@ let subscriptions = {};
 
 process.on('message', (msg, setHandle) => {
     msg = JSON.parse(msg)
-    // console.log(`child${process.argv[2]} get:`, msg)
+    console.log(`child${process.argv[2]} get:`, msg)
     if(msg.type === "init") {
         datas = msg.data;
+        console.log(`I got ${datas.length} init data.`)
         datas.forEach(data => {
             subscriptions[data.Id] = [];
         });
