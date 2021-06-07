@@ -66,13 +66,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 const getInitData = async (body) => {
-  const datas = await UserModel.find({Id:1});
+  const datas = await UserModel.find(body);
   return datas
 };
 
 const copyMongoData = (childs) => async () => {
-  const datas = await UserModel.find({Id: { $lte: 10} });
-  //const datas = []
+  const datas = await UserModel.find({id: { $lte: 10} });
+  console.log(datas.length);
+  // const datas = []
   // console.log('datas', datas,  Math.sqrt(childs.length))
   const row = Math.sqrt(childs.length);
   for (let i = 0; i < childs.length; i++) {
@@ -146,14 +147,15 @@ wss.on('connection', async function connection(client) {
   client.on('message', async function incoming(message) {
     console.log('server receive message!')
     message = JSON.parse(message);
-    // console.log(message)
+    console.log(message)
     const {type, body} = message;
 
     switch (type) {
       // on open chat box
       case 'query': {
         client.status = "sub"
-        const data = getInitData(body)
+        const data = await getInitData(body)
+        console.log(data.length)
         client.data = data
         for(let i = 0; i < Math.sqrt(total_num); i++) {
           childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
