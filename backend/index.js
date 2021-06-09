@@ -161,7 +161,7 @@ wss.on('connection', async function connection(client) {
           childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
               type:'subscription',
               clientId:client.id,
-              ids: data.filter(x => parseInt(x.id) % Math.sqrt(total_num) == i).map(user => user.id)
+              ids: data.filter(x => parseInt(x.id) % Math.sqrt(total_num) == i)
           }))
         }
         break
@@ -205,7 +205,7 @@ wss.on('connection', async function connection(client) {
 });
 
 mongo.connect();
-setTimeout(copyMongoData(childs), 3000);
+// setTimeout(copyMongoData(childs), 3000);
 server.listen(8080, () => {
   console.log('Server listening at http://localhost:8080');
 });
