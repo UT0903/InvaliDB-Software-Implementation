@@ -3,27 +3,30 @@ let subscriptions = {};
 
 process.on('message', (msg, setHandle) => {
     msg = JSON.parse(msg)
-    console.log(`child${process.argv[2]} get:`, msg)
+    console.log("child${process.argv[2]} get:", msg)
     if(msg.type === "init") {
         datas = msg.data;
-        console.log(`I got ${datas.length} init data.`)
         datas.forEach(data => {
-            subscriptions[data.Id] = [];
+            subscriptions[data.id] = [];
         });
-    } else if (msg.type === "subscribe") {
+        console.log(subscriptions)
+    } else if (msg.type === "subscription") {
         const { clientId, ids } = msg;
+        console.log("${process.argv[2]} get into subscription");
         ids.forEach(id => {
             subscriptions[id].push(clientId);
         });
-    } else if (msg.type === "write") {
+        console.log(subscriptions);
+    } else if (msg.type === "modify") {
         const { id, change } = msg.modify; // id = { id: id } change = { key: value }
         const clientId = Object.values(id)[0]
-        let user = datas.find(data => data.id === clientId);
-        user[Object.keys(change)[0]] = Object.values(change)[0];
+        datas = datas.filter(id => id != clientId);
+        datas.push(change)
         process.send(JSON.stringify([{
-            user,
+            change,
             clients: subscriptions[clientId]
         }]));
+        console.log(datas);
     } else if (msg.type === "unsubscription"){
         const { clientId } = msg;
         Object.entries(subscriptions).forEach(([key, value]) => {
@@ -32,4 +35,4 @@ process.on('message', (msg, setHandle) => {
     }
 })
 
-console.log(`cluster node ${process.argv[2]} start`)
+console.log("cluster node ${process.argv[2]} start")
