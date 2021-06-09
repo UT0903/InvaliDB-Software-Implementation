@@ -1,38 +1,44 @@
-let datas = [];
 let subscriptions = {};
+let subscruption_list = {};
 
 process.on('message', (msg, setHandle) => {
     msg = JSON.parse(msg)
-    console.log("child${process.argv[2]} get:", msg)
-    if(msg.type === "init") {
-        datas = msg.data;
-        datas.forEach(data => {
-            subscriptions[data.id] = [];
-        });
-        console.log(subscriptions)
-    } else if (msg.type === "subscription") {
+    // console.log(`child${process.argv[2]} get:`, msg)
+    if (msg.type === "subscription") {
         const { clientId, ids } = msg;
-        console.log("${process.argv[2]} get into subscription");
-        ids.forEach(id => {
-            subscriptions[id].push(clientId);
+        const data_ids = ids.map(data => data.id);
+        subscruption_list[clientId] = data_ids;
+        ids.forEach(data => {
+            const index = data.id;
+            if (subscriptions.hasOwnProperty(`${index}`)) { // data already in it
+                subscriptions[index].subscribers.push(clientId);
+            } else {
+                subscriptions[index] = {};
+                subscriptions[index].data = data;
+                subscriptions[index].subscribers = [clientId];
+            }
         });
         console.log(subscriptions);
     } else if (msg.type === "modify") {
         const { id, change } = msg.modify; // id = { id: id } change = { key: value }
-        const clientId = Object.values(id)[0]
-        datas = datas.filter(id => id != clientId);
-        datas.push(change)
+        const index = Object.values(id)[0];
+        subscriptions[index].data = change;
         process.send(JSON.stringify([{
             change,
-            clients: subscriptions[clientId]
+            clients: subscriptions[index].subscribers
         }]));
-        console.log(datas);
     } else if (msg.type === "unsubscription"){
         const { clientId } = msg;
-        Object.entries(subscriptions).forEach(([key, value]) => {
-            subscriptions[key] = value.filter(id => id != clientId);
+        const data_ids = subscruption_list[clientId];
+        data_ids.forEach(index => {
+            const remaining_subscribers = subscriptions[index].subscribers.filter(id => id != clientId);
+            if (remaining_subscribers.length > 0) {
+                subscriptions[index].subscribers = remaining_subscribers;
+            } else { // no one is subscribing
+                delete subscriptions[index];
+            }
         });
     }
 })
 
-console.log("cluster node ${process.argv[2]} start")
+console.log(`cluster node ${process.argv[2]} start`)
