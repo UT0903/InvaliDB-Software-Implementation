@@ -18,7 +18,7 @@ process.on('message', (msg, setHandle) => {
                 subscriptions[index].subscribers = [clientId];
             }
         });
-        console.log(subscriptions);
+        // console.log(subscriptions);
     } else if (msg.type === "modify") {
         const { id, change } = msg.modify; // id = { id: id } change = { key: value }
         const index = Object.values(id)[0];
