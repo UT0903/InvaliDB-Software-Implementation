@@ -127,10 +127,10 @@ const childs = InitForCluster(total_num);
 
 const Clients = {}; // keep track of all open AND active chat boxes
 let id = 0;
-
 wss.on('connection', async function connection(client) {
   client.id = id
   id += 1
+  client.count = 0
   client.status = "unsub"
   client.data = []; // keep track of client's CURRENT chat box
   client.sendEvent = async (e) => {
@@ -154,51 +154,55 @@ wss.on('connection', async function connection(client) {
     switch (type) {
       // on open chat box
       case 'query': {
+        console.log("count: ", count)
         client.status = "sub"
         const data = await getInitData(body)
         // console.log(data.length)
         client.data = data
         client.sendEvent(JSON.stringify({type:"query", body:client.data}))
         for(let i = 0; i < Math.sqrt(total_num); i++) {
-          childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
+          childs[Math.floor((client.id + client.count) / Math.sqrt(total_num)) + i].send(JSON.stringify({
               type:'subscription',
               clientId:client.id,
               ids: data.filter(x => parseInt(x.id) % Math.sqrt(total_num) == i)
           }))
         }
+        if(count != 0) {
+            for(let i = 0; i < Math.sqrt(total_num); i++) {
+                childs[Math.floor((client.id + client.count - 1) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+                type: 'unsubscription',
+                clientId: client.id
+                }))
+            }
+        }
+        client.count = (client.count + 1) % 3
         break
       }
       case 'modify': {
         const {id, change} = body
         runMongo(id, change);
-        for(let i = 0; i < Math.sqrt(total_num); i++) {
+        for(let i = 0; i < total_num; i++) {
           if(id.id % Math.sqrt(total_num) != i){
             continue
           }
-          childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
+          childs[i].send(JSON.stringify({
               type: 'modify',
               modify: {id, change}
           }))
         }
         break
       }
-      case 'unsubscription': {
-        client.status = "unsub"
-        childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
-          type: 'unsubscription',
-          clientId: client.id
-        }))
-        break
-      }
     }
        
     // disconnected
     client.once('close', () => {
-      for(let i = 0; i < Math.sqrt(total_num); i++) {
-        childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
-          type: 'unsubscription',
-          clientId: client.id
-        }))
+      if(count != 0) {
+        for(let i = 0; i < Math.sqrt(total_num); i++) {
+            childs[Math.floor((client.id + client.count) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+            type: 'unsubscription',
+              clientId: client.id
+            }))
+        }
       }
       delete Clients[`client_${client.id}`]
     });
