@@ -70,7 +70,7 @@ const EditableTable = ({ data, setData }) => {
 
             if (index > -1) {
                 const item = newData[index];
-                console.log('newData[index]', newData[index])
+                //console.log('newData[index]', newData[index])
                 newData.splice(index, 1, { ...item, ...row });
                 setData(newData, index);
                 setEditingKey('');
