@@ -66,24 +66,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 const getInitData = async (body) => {
+  console.log("Start finding data.");
   const datas = await UserModel.find(body);
+  console.log("Finish.");
   return datas
 };
-
-const copyMongoData = (childs) => async () => {
-  const datas = await UserModel.find({ $expr: { $lt: [{ $toDouble: "$id" }, 10] } });
-  // console.log(datas.length);
-  // const datas = []
-  // console.log('datas', datas,  Math.sqrt(childs.length))
-  const row = Math.sqrt(childs.length);
-  for (let i = 0; i < childs.length; i++) {
-    childs[i].send(JSON.stringify({
-      type: "init",
-      data: datas.filter(
-        (data, idx) => (idx % row === i % row))
-    }))
-  }
-}
 
 // [
 //   {
@@ -98,30 +85,23 @@ const copyMongoData = (childs) => async () => {
 //     clients: [1, 2, 3]
 //   }
 // ]
+
 const InitForCluster = (totalNum) => {
   let childs = [];
   for (let i = 0; i < totalNum; i++) {
     const subProcess = fork(path.join(__dirname, 'child.js'), [i]);
     subProcess.on('message', (data) => {
-        data = JSON.parse(data)
+      data = JSON.parse(data)
         // console.log(data)
         const dirtyClients = {}
-        // data.map(obj => obj.clients.map(client => {
-        //     dirtyClients.push(client)
-        //     // console.log(Clients[`client_${client}`].data)
-        //     Clients[`client_${client}`].data.map(x => {
-        //       if(x.id === obj.change.id){
-        //         return obj.change
-        //       }
-        //       return x
-        //     })
-        //   }
-        // ))
+        const changedData = {}
+
         data.map(obj => obj.clients.map(client => {
           dirtyClients[client] = 1
-          // console.log(dirty client: ${client})
-          Clients[`client_${client}`].data = Clients[`client_${client}`].data.filter(x => x.id != obj.change.id)
-          Clients[`client_${client}`].data.push(obj.change)
+          if(!(`client_${client}` in changedData)){
+              changedData[`client_${client}`] = []
+          }
+          changedData[`client_${client}`].push(obj.change)
         }
       ))
         for(let clientId in Object.keys(dirtyClients)) {
@@ -129,7 +109,7 @@ const InitForCluster = (totalNum) => {
           let client = Clients[`client_${clientId}`]
           // console.log(client.data);
           if(client.status == "sub"){
-              client.sendEvent(JSON.stringify(client.data))
+            client.sendEvent(JSON.stringify({type: "modify", body: changedData[`client_${clientId}`]}))
           }
         }
     })
@@ -146,77 +126,83 @@ const total_num = 9
 const childs = InitForCluster(total_num);
 
 const Clients = {}; // keep track of all open AND active chat boxes
-let id = 0
+let id = 0;
 wss.on('connection', async function connection(client) {
   client.id = id
   id += 1
+  client.count = 0
   client.status = "unsub"
   client.data = []; // keep track of client's CURRENT chat box
-  client.sendEvent = (e) => client.send(JSON.stringify(e));
+  client.sendEvent = async (e) => {
+    await client.send(JSON.stringify(e))
+    console.log(`End time: ${Date.now()}`);
+  };
 
   client.on('message', async function incoming(message) {
+    console.log(`Start time: ${Date.now()}`);
     // console.log('server receive message!')
     message = JSON.parse(message);
     // console.log(message)
     const {type, body} = message;
 
+    const runMongo = async (id, change) => {
+      console.log("Start modify.")
+      await UserModel.findOneAndUpdate(id, change);
+      console.log("End modify.")
+    }
+
     switch (type) {
       // on open chat box
       case 'query': {
+        console.log("count: ", count)
         client.status = "sub"
         const data = await getInitData(body)
         // console.log(data.length)
         client.data = data
-        client.sendEvent(JSON.stringify(client.data))
+        client.sendEvent(JSON.stringify({type:"query", body:client.data}))
         for(let i = 0; i < Math.sqrt(total_num); i++) {
-          childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
+          childs[Math.floor((client.id + client.count) / Math.sqrt(total_num)) + i].send(JSON.stringify({
               type:'subscription',
               clientId:client.id,
               ids: data.filter(x => parseInt(x.id) % Math.sqrt(total_num) == i)
           }))
         }
+        if(count != 0) {
+            for(let i = 0; i < Math.sqrt(total_num); i++) {
+                childs[Math.floor((client.id + client.count - 1) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+                type: 'unsubscription',
+                clientId: client.id
+                }))
+            }
+        }
+        client.count = (client.count + 1) % 3
         break
       }
       case 'modify': {
         const {id, change} = body
-        //{id:{id:id}, change:{key:value}}
-        const result = await UserModel.find(id)
-        console.log("Find it ? ===> ${result}")
-        // await UserModel.findOneAndUpdate(id, change)
-        let doc = await UserModel.findOneAndUpdate(id, change, {
-          new: true
-        });
-        console.log("New name = ${doc.name}");
-        // console.log(id);
-        // console.log(change)
-        for(let i = 0; i < Math.sqrt(total_num); i++) {
+        runMongo(id, change);
+        for(let i = 0; i < total_num; i++) {
           if(id.id % Math.sqrt(total_num) != i){
             continue
           }
-          childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
+          childs[i].send(JSON.stringify({
               type: 'modify',
               modify: {id, change}
           }))
         }
         break
       }
-      case 'unsubscription': {
-        client.status = "unsub"
-        childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
-          type: 'unsubscription',
-          clientId: client.id
-        }))
-        break
-      }
     }
        
     // disconnected
     client.once('close', () => {
-      for(let i = 0; i < Math.sqrt(total_num); i++) {
-        childs[Math.floor(client.id / Math.sqrt(total_num) + i)].send(JSON.stringify({
-          type: 'unsubscription',
-          clientId: client.id
-        }))
+      if(count != 0) {
+        for(let i = 0; i < Math.sqrt(total_num); i++) {
+            childs[Math.floor((client.id + client.count) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+            type: 'unsubscription',
+              clientId: client.id
+            }))
+        }
       }
       delete Clients[`client_${client.id}`]
     });
