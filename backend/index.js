@@ -10,6 +10,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { fork } from 'child_process'
 import { time } from 'console'
+import { start } from 'repl'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -93,6 +94,7 @@ const InitForCluster = (totalNum) => {
     subProcess.on('message', (data) => {
       data = JSON.parse(data)
         // console.log(data)
+        // console.log(Clients)
         const dirtyClients = {}
         const changedData = {}
 
@@ -104,14 +106,14 @@ const InitForCluster = (totalNum) => {
           changedData[`client_${client}`].push(obj.change)
         }
       ))
-        for(let clientId in Object.keys(dirtyClients)) {
-          // console.log(${clientId} has:);
+        Object.keys(dirtyClients).forEach(clientId => {
+          // console.log(`clientId: ${clientId} has to know modified data.`)
           let client = Clients[`client_${clientId}`]
           // console.log(client.data);
-          if(client.status == "sub"){
-            client.sendEvent(JSON.stringify({type: "modify", body: changedData[`client_${clientId}`]}))
+          if(client.status === "sub") {
+            client.sendEvent(JSON.stringify({type: "modify", body: changedData[`client_${clientId}`]}), "modify")
           }
-        }
+        })
     })
 
     subProcess.on('error', (err) => {
@@ -122,8 +124,12 @@ const InitForCluster = (totalNum) => {
   }
   return childs;
 }
-const total_num = 9
+const total_num = 25 // 9
 const childs = InitForCluster(total_num);
+let query_cnt = 0
+let modify_cnt = 0
+let query_cnt_end = 0
+let modify_cnt_end = 0
 
 const Clients = {}; // keep track of all open AND active chat boxes
 let id = 0;
@@ -133,56 +139,67 @@ wss.on('connection', async function connection(client) {
   client.count = 0
   client.status = "unsub"
   client.data = []; // keep track of client's CURRENT chat box
-  client.sendEvent = async (e) => {
+  client.sendEvent = async (e, type) => {
+    // console.log("aaaaa");
     await client.send(JSON.stringify(e))
-    console.log(`End time: ${Date.now()}`);
+    if (type === "modify") {
+      console.log(`modify-${modify_cnt_end} ends at time: ${Date.now()}`);
+      modify_cnt_end += 1;
+    } else { // type === "query"
+      console.log(`query-${query_cnt_end} ends at time : ${Date.now()}`);
+      query_cnt_end += 1;
+    }
   };
 
   client.on('message', async function incoming(message) {
-    console.log(`Start time: ${Date.now()}`);
+    const start_time = Date.now();
     // console.log('server receive message!')
     message = JSON.parse(message);
     // console.log(message)
     const {type, body} = message;
 
     const runMongo = async (id, change) => {
-      console.log("Start modify.")
+      // console.log("Start modify.")
       await UserModel.findOneAndUpdate(id, change);
-      console.log("End modify.")
+      // console.log("End modify.")
     }
 
     switch (type) {
       // on open chat box
       case 'query': {
-        console.log("count: ", count)
+        // console.log("count: ", client.count)
+        console.log(`query-${query_cnt} starts at time : ${start_time}`);
+        query_cnt += 1;
         client.status = "sub"
         const data = await getInitData(body)
         // console.log(data.length)
         client.data = data
-        client.sendEvent(JSON.stringify({type:"query", body:client.data}))
+        client.sendEvent(JSON.stringify({type:"query", body:client.data}), "query")
         for(let i = 0; i < Math.sqrt(total_num); i++) {
-          childs[Math.floor((client.id + client.count) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+          childs[Math.sqrt(total_num) * Math.floor(((client.id + client.count) % 3) / Math.sqrt(total_num)) + i].send(JSON.stringify({
               type:'subscription',
               clientId:client.id,
               ids: data.filter(x => parseInt(x.id) % Math.sqrt(total_num) == i)
           }))
         }
-        if(count != 0) {
+        if(client.count != 0) {
             for(let i = 0; i < Math.sqrt(total_num); i++) {
-                childs[Math.floor((client.id + client.count - 1) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+                childs[Math.sqrt(total_num) * Math.floor(((client.id + client.count - 1) % 3) / Math.sqrt(total_num)) + i].send(JSON.stringify({
                 type: 'unsubscription',
                 clientId: client.id
                 }))
             }
         }
-        client.count = (client.count + 1) % 3
+        client.count = (client.count + 1)
         break
       }
       case 'modify': {
+        console.log(`modify-${modify_cnt} starts at time: ${start_time}`);
+        modify_cnt += 1;
         const {id, change} = body
         runMongo(id, change);
         for(let i = 0; i < total_num; i++) {
-          if(id.id % Math.sqrt(total_num) != i){
+          if(id.id % Math.sqrt(total_num) != i % Math.sqrt(total_num)){
             continue
           }
           childs[i].send(JSON.stringify({
@@ -196,9 +213,10 @@ wss.on('connection', async function connection(client) {
        
     // disconnected
     client.once('close', () => {
-      if(count != 0) {
+      // console.log("fuck you too")
+      if(client.count != 0) {
         for(let i = 0; i < Math.sqrt(total_num); i++) {
-            childs[Math.floor((client.id + client.count) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+            childs[Math.sqrt(total_num) * Math.floor(((client.id + client.count - 1) % 3) / Math.sqrt(total_num)) + i].send(JSON.stringify({
             type: 'unsubscription',
               clientId: client.id
             }))

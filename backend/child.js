@@ -1,11 +1,12 @@
 let subscriptions = {};
 let subscruption_list = {};
 
-process.on('message', (msg, setHandle) => {
+process.on('message', (msg) => {
     msg = JSON.parse(msg)
     // console.log(`child${process.argv[2]} get:`, msg)
     if (msg.type === "subscription") {
         const { clientId, ids } = msg;
+        // console.log(`child${process.argv[2]} got client ${clientId}`)
         const data_ids = ids.map(data => data.id);
         subscruption_list[clientId] = data_ids;
         ids.forEach(data => {
@@ -20,22 +21,32 @@ process.on('message', (msg, setHandle) => {
         });
         // console.log(subscriptions);
     } else if (msg.type === "modify") {
+        // console.log(`I am child${process.argv[2]}, I get into "modify"`)
         const { id, change } = msg.modify; // id = { id: id } change = { key: value }
         const index = Object.values(id)[0];
-        subscriptions[index].data = change;
-        process.send(JSON.stringify([{
-            change,
-            clients: subscriptions[index].subscribers
-        }]));
+        if (subscriptions.hasOwnProperty(`${index}`)) { // data is in it
+            // console.log(`I am child${process.argv[2]}, I am ready to send"`)
+            subscriptions[index].data = change;
+            process.send(JSON.stringify([{
+                change,
+                clients: subscriptions[index].subscribers
+            }]));
+        }
+        // else {
+        //     console.log(`I am child${process.argv[2]}, sorry I don't have data: ${index}.`)
+        // }
     } else if (msg.type === "unsubscription"){
+        // console.log(`child${process.argv[2]} unsub get:`, msg)
         const { clientId } = msg;
         const data_ids = subscruption_list[clientId];
         data_ids.forEach(index => {
-            const remaining_subscribers = subscriptions[index].subscribers.filter(id => id != clientId);
-            if (remaining_subscribers.length > 0) {
-                subscriptions[index].subscribers = remaining_subscribers;
-            } else { // no one is subscribing
-                delete subscriptions[index];
+            if (subscriptions.hasOwnProperty(`${index}`)) {
+                const remaining_subscribers = subscriptions[index].subscribers.filter(id => id != clientId);
+                if (remaining_subscribers.length > 0) {
+                    subscriptions[index].subscribers = remaining_subscribers;
+                } else { // no one is subscribing
+                    delete subscriptions[index];
+                }
             }
         });
     }
