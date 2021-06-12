@@ -1,6 +1,6 @@
 search_type = 'query' # 'query' or 'modify'
-idxs = range(1, 458, 1) # (start, end, step)
-file_paths = ['backend/query_3wps_25node.txt', 'backend/query_3wps_9node.txt']
+idxs = range(2, 458, 1) # (start, end, step)
+file_paths = ['backend/query_3wps_1node.txt', 'backend/query_3wps_4node-2.txt', 'backend/query_3wps_9node-2.txt', 'backend/query_3wps_16node.txt', 'backend/query_3wps_25node-2.txt']
 out_file_name = 'out.png'
 import sys
 import matplotlib.pyplot as plt
@@ -29,7 +29,7 @@ def cal_time(lines):
         
 def draw_plt(datas):
     #list(map(, x_axis))
-    colors = [(255/255,100/255,100/255), (100/255,100/255,255/255)]
+    colors = [(255/255,100/255,100/255), (100/255,100/255,255/255), (100/255,255/255,100/255), (100/255,255/255,255/255), (255/255,100/255,255/255)]
     plt.xlabel("queries ")
     plt.ylabel("latency (ms)")
     plt.grid(True)
@@ -37,7 +37,7 @@ def draw_plt(datas):
         x_axis, y_axis = zip(*data)
         plt.plot(x_axis, y_axis, color=colors[i % len(colors)], label=file_paths[i])
     plt.legend()
-    #plt.show()
+    plt.show()
     plt.savefig(out_file_name)
 
 def main():
