@@ -1,44 +1,50 @@
-query = []
-modify = []
+search_type = 'query' # 'query' or 'modify'
+idxs = range(1, 458, 1) # (start, end, step)
+file_paths = ['backend/query_3wps_25node.txt', 'backend/query_3wps_9node.txt']
+out_file_name = 'out.png'
 import sys
+import matplotlib.pyplot as plt
+def read_txt(file_path):
+    with open(file_path, "r") as f:
+        lines = f.readlines()
+        lines = list(map(lambda x: x.strip(), lines))
+        lines = list(filter(lambda x: "{}-".format(search_type) in x, lines))
+    return lines
+def cal_time(lines):
+    def get_timestamp(idx):
+        timestamps = [-1, -1] # [start_time, end_time]
+        for line in lines:
+            if "{}-{} ".format(search_type, idx) in line:
+                line = line.split()
+                if line[1] == 'starts':
+                    timestamps[0] = int(line[-1])
+                elif line[1] == 'ends':
+                    timestamps[1] = int(line[-1])
+        return timestamps[1] - timestamps[0] if -1 not in timestamps else -1
+    time_intervals = []
+    for idx in idxs:
+        time_intervals.append([idx, get_timestamp(idx)])
+        time_intervals = list(filter(lambda x: x[1] != -1, time_intervals))
+    return time_intervals
+        
+def draw_plt(datas):
+    #list(map(, x_axis))
+    colors = [(255/255,100/255,100/255), (100/255,100/255,255/255)]
+    plt.xlabel("queries ")
+    plt.ylabel("latency (ms)")
+    plt.grid(True)
+    for i, data in enumerate(datas):
+        x_axis, y_axis = zip(*data)
+        plt.plot(x_axis, y_axis, color=colors[i % len(colors)], label=file_paths[i])
+    plt.legend()
+    #plt.show()
+    plt.savefig(out_file_name)
 
-def generate_nums(start, step, type):
-    max_len = len(query) if type == 'query' else len(modify)
-    res = []
-    for i in range(start, max_len, step):
-       res.append(i) 
-    return res
-
-with open(sys.argv[1], "r") as f:
-    lines = f.readlines()
-    i = 0
-    for line in lines:
-        op = line.split('-')[0]
-        if op == 'query' or op == 'modify':
-            remaining = line.split('-')[1]
-            content = remaining.split(' ')
-            id, type, time = int(content[0]), content[1], int(content[5]) if op == 'query' else int(content[4])
-            if op == 'query':
-                if type == 'starts':
-                    query.append(-time)
-                else:
-                    query[id] += time
-            else:
-                if type == 'starts':
-                    modify.append(-time)
-                else:
-                    modify[id] += time
-        else:
-            pass
-
-# generate_nums(start, step, type)
-wanted_query = generate_nums(100, 100, 'query') # [100, 200, 300, 400...]
-print('Query:')
-for i in wanted_query:
-    print('query-' + str(i) + ': ' + str(query[i]))
-
-wanted_modify = generate_nums(100, 100, 'modify') # [100, 200, 300, 400...]
-print('\nModify:')
-for i in wanted_modify:
-    print('modify-' + str(i) + ': ' + str(modify[i]))
+def main():
+    datas = []
+    for file_path in file_paths:
+        lines = read_txt(file_path)
+        datas.append(cal_time(lines))
+    draw_plt(datas)
+main()
 

@@ -19,14 +19,16 @@ const ChatRoom = ({ me, displayStatus }) => {
   const [data, setData] = useState([]);
   const [messageInput, setMessageInput] = useState("");
   client.onmessage = (byteString) => {
-    const { data } = byteString
-    const parsed = JSON.parse(data)
+    const parsed = JSON.parse(byteString.data)
     const parsedd = JSON.parse(parsed)
-    console.log('recv data:', parsedd)
+    console.log('recv data:', parsedd, typeof(parsedd), typeof(parsed))
     if(parsedd.type === "modify"){
       const newdata = data;
+      console.log(typeof(newdata))
       for(let i = 0; i < parsedd.body.length; i++){
-        const index = newdata.findIndex((item)=>parsedd.body[i].Id === item.id)
+        console.log('body id', typeof(parsedd.body[i].Id))
+        const index = newdata.findIndex((item)=>(parsedd.body[i].Id === item.id))
+        console.log('modify index', index)
         if(index !== -1){
           newdata[index].Id = parsedd.body[i].id
           newdata[index].key = parsedd.body[i].id
@@ -37,10 +39,11 @@ const ChatRoom = ({ me, displayStatus }) => {
           newdata[index].Ocuppation = parsedd.body[i].ocuppation
         }
       }
+      console.log(newdata)
       setData(newdata)
     }
     else{
-      setData(parsedd.body.map((x) => ({
+      const arr = parsedd.body.map((x) => ({
         Id: x.id,
         key: x.id,
         Gender: x.gender,
@@ -48,7 +51,9 @@ const ChatRoom = ({ me, displayStatus }) => {
         Age: x.age,
         Married: x.married,
         Ocuppation: x.ocuppation
-      })))
+      }))
+      console.log('query type', typeof(arr))
+      setData(arr)
     }
   }
   const modifyTableData = (newData, index) => {
@@ -74,7 +79,7 @@ const ChatRoom = ({ me, displayStatus }) => {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
   const getRandomInt = () => {
-    return Math.floor(Math.random() * 999900);
+    return Math.floor(Math.random() * 100000);
   }
   const sendData = async (data) => {
     console.log('send', data)
@@ -82,7 +87,7 @@ const ChatRoom = ({ me, displayStatus }) => {
   }
   const testQuery = async() =>{
     console.log('start testQuery')
-    for(let i = 4000; i >= 0; i--){
+    for(let i = 1000; i >= 0; i--){
       const randomNum = getRandomInt()
       const data = {type: "query", body: { "$expr": {"$and": [{ "$lt": [{ "$toDouble": "$id" }, randomNum + 10]}, {"$gt": [{ "$toDouble": "$id" }, randomNum] } ] } }}
       await client.send(JSON.stringify(data))
@@ -107,11 +112,14 @@ const ChatRoom = ({ me, displayStatus }) => {
     for(let i = 100000; i >= 0; i--){
       let data = modify()
       await client.send(JSON.stringify(data))
-      await sleep(50)
+      await sleep(300)
       console.log(i, data)
     }
   }
-
+  const testtest = () =>{
+    let data = [1, 2, 3, 4, 5, 6]
+    console.log(data.findIndex((item)=>(item === 4)))
+  }
   return (
     <> <div className="App-title">
       <h1>{me}'s </h1> </div>
@@ -143,6 +151,7 @@ const ChatRoom = ({ me, displayStatus }) => {
       ></Input.Search>
       <button onClick={testWrite}>test constant Write</button>
       <button onClick={testQuery}>test query</button>
+      <button onClick={testtest}>test</button>
       <EditTable data={data} setData={modifyTableData} />
     </>);
 };
