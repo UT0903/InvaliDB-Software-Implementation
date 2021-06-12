@@ -23,7 +23,7 @@ const ChatRoom = ({ me, displayStatus }) => {
     const parsedd = JSON.parse(parsed)
     console.log('recv data:', parsedd, typeof(parsedd), typeof(parsed))
     if(parsedd.type === "modify"){
-      const newdata = data;
+      const newdata = JSON.parse(JSON.stringify(data));
       //console.log(typeof(newdata))
       for(let i = 0; i < parsedd.body.length; i++){
         console.log('modify id:', parsedd.body[i].id)
@@ -41,7 +41,7 @@ const ChatRoom = ({ me, displayStatus }) => {
         }
       }
       //console.log(newdata)
-      setData(newdata)
+      setData((oldData) =>(newdata))
     }
     else{
       const arr = parsedd.body.map((x) => ({
@@ -122,8 +122,8 @@ const ChatRoom = ({ me, displayStatus }) => {
   }
   const testIncreaseWrite = async () =>{
     console.log('start Increase Write')
-    for(let i = 1000; i >= 0; i--){
-      await mySendData(i, getWriteData())
+    for(let i = 10000; i >= 0; i--){
+      await mySendData(i/1000, getWriteData())
     }
   }
   const testConstantWrite = async ()=>{

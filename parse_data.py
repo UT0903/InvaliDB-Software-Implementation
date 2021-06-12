@@ -1,6 +1,6 @@
-search_type = 'query' # 'query' or 'modify'
+search_type = 'modify' # 'query' or 'modify'
 idxs = range(2, 458, 1) # (start, end, step)
-file_paths = ['backend/query_3wps_1node.txt', 'backend/query_3wps_4node-2.txt', 'backend/query_3wps_9node-2.txt', 'backend/query_3wps_16node.txt', 'backend/query_3wps_25node-2.txt']
+file_paths = ['backend/write_3wps_4node.txt', 'backend/query_3wps_9node.txt', 'backend/write_3wps_16node.txt', 'backend/write_3wps_25node.txt']
 out_file_name = 'out.png'
 import sys
 import matplotlib.pyplot as plt
@@ -33,11 +33,12 @@ def draw_plt(datas):
     plt.xlabel("queries ")
     plt.ylabel("latency (ms)")
     plt.grid(True)
+    node_num = [4, 9, 16, 25]
     for i, data in enumerate(datas):
         x_axis, y_axis = zip(*data)
-        plt.plot(x_axis, y_axis, color=colors[i % len(colors)], label=file_paths[i])
+        plt.plot(x_axis, y_axis, color=colors[i % len(colors)], label=str(node_num[i]) + " nodes")
     plt.legend()
-    plt.show()
+    #plt.show()
     plt.savefig(out_file_name)
 
 def main():
