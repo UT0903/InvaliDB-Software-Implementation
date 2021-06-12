@@ -124,7 +124,7 @@ const InitForCluster = (totalNum) => {
   }
   return childs;
 }
-const total_num = 4 // 9
+const total_num = 9 // 9
 const childs = InitForCluster(total_num);
 let query_cnt = 0
 let modify_cnt = 0
