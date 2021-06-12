@@ -124,7 +124,7 @@ const InitForCluster = (totalNum) => {
   }
   return childs;
 }
-const total_num = 4 // 9
+const total_num = 25 // 9
 const childs = InitForCluster(total_num);
 let query_cnt = 0
 let modify_cnt = 0
@@ -140,8 +140,6 @@ wss.on('connection', async function connection(client) {
   client.status = "unsub"
   client.data = []; // keep track of client's CURRENT chat box
   client.sendEvent = async (e, type) => {
-    // console.log("aaaaa");
-    await client.send(JSON.stringify(e))
     if (type === "modify") {
       console.log(`modify-${modify_cnt_end} ends at time: ${Date.now()}`);
       modify_cnt_end += 1;
@@ -149,6 +147,8 @@ wss.on('connection', async function connection(client) {
       console.log(`query-${query_cnt_end} ends at time : ${Date.now()}`);
       query_cnt_end += 1;
     }
+    // console.log("aaaaa");
+    await client.send(JSON.stringify(e))
   };
 
   client.on('message', async function incoming(message) {
