@@ -1,0 +1,47 @@
+Server listening at http://localhost:8000
+cluster node 1 start
+cluster node 0 start
+cluster node 2 start
+cluster node 6 start
+cluster node 3 start
+cluster node 4 start
+cluster node 5 start
+cluster node 8 start
+cluster node 7 start
+Mongo database connected!
+query-0 starts at time : 1623488069433
+Start finding data.
+Finish.
+query-0 ends at time : 1623488087113
+modify-0 starts at time: 1623488110794
+modify-0 ends at time: 1623488110825
+modify-1 starts at time: 1623488111102
+modify-1 ends at time: 1623488111105
+modify-2 starts at time: 1623488111394
+modify-2 ends at time: 1623488111397
+modify-3 starts at time: 1623488111695
+modify-3 ends at time: 1623488111698
+modify-4 starts at time: 1623488111994
+modify-4 ends at time: 1623488111998
+modify-5 starts at time: 1623488112297
+modify-5 ends at time: 1623488112301
+modify-6 starts at time: 1623488113014
+modify-6 ends at time: 1623488113017
+modify-7 starts at time: 1623488113943
+modify-7 ends at time: 1623488113945
+modify-8 starts at time: 1623488114849
+modify-8 ends at time: 1623488114851
+modify-9 starts at time: 1623488116846
+modify-9 ends at time: 1623488116853
+modify-10 starts at time: 1623488121158
+modify-10 ends at time: 1623488121164
+modify-11 starts at time: 1623488126011
+modify-11 ends at time: 1623488126015
+modify-12 starts at time: 1623488134057
+modify-12 ends at time: 1623488134060
+modify-13 starts at time: 1623488139719
+modify-13 ends at time: 1623488139721
+modify-14 starts at time: 1623488156758
+modify-14 ends at time: 1623488156761
+modify-15 starts at time: 1623488167160
+modify-15 ends at time: 1623488167163

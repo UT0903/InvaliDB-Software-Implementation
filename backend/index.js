@@ -124,7 +124,7 @@ const InitForCluster = (totalNum) => {
   }
   return childs;
 }
-const total_num = 25 // 9
+const total_num = 9 // 9
 const childs = InitForCluster(total_num);
 let query_cnt = 0
 let modify_cnt = 0
@@ -176,7 +176,7 @@ wss.on('connection', async function connection(client) {
         client.data = data
         client.sendEvent(JSON.stringify({type:"query", body:client.data}), "query")
         for(let i = 0; i < Math.sqrt(total_num); i++) {
-          childs[Math.sqrt(total_num) * Math.floor(((client.id + client.count) % 3) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+          childs[Math.sqrt(total_num) * Math.floor(((client.id + client.count) % Math.sqrt(total_num)) / Math.sqrt(total_num)) + i].send(JSON.stringify({
               type:'subscription',
               clientId:client.id,
               ids: data.filter(x => parseInt(x.id) % Math.sqrt(total_num) == i)
@@ -184,7 +184,7 @@ wss.on('connection', async function connection(client) {
         }
         if(client.count != 0) {
             for(let i = 0; i < Math.sqrt(total_num); i++) {
-                childs[Math.sqrt(total_num) * Math.floor(((client.id + client.count - 1) % 3) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+                childs[Math.sqrt(total_num) * Math.floor(((client.id + client.count - 1) % Math.sqrt(total_num)) / Math.sqrt(total_num)) + i].send(JSON.stringify({
                 type: 'unsubscription',
                 clientId: client.id
                 }))
@@ -202,6 +202,7 @@ wss.on('connection', async function connection(client) {
           if(id.id % Math.sqrt(total_num) != i % Math.sqrt(total_num)){
             continue
           }
+          // console.log("into modify")
           childs[i].send(JSON.stringify({
               type: 'modify',
               modify: {id, change}
@@ -216,7 +217,7 @@ wss.on('connection', async function connection(client) {
       // console.log("fuck you too")
       if(client.count != 0) {
         for(let i = 0; i < Math.sqrt(total_num); i++) {
-            childs[Math.sqrt(total_num) * Math.floor(((client.id + client.count - 1) % 3) / Math.sqrt(total_num)) + i].send(JSON.stringify({
+            childs[Math.sqrt(total_num) * Math.floor(((client.id + client.count - 1) % Math.sqrt(total_num)) / Math.sqrt(total_num)) + i].send(JSON.stringify({
             type: 'unsubscription',
               clientId: client.id
             }))
@@ -232,5 +233,5 @@ wss.on('connection', async function connection(client) {
 mongo.connect();
 // setTimeout(copyMongoData(childs), 3000);
 server.listen(8080, () => {
-  console.log('Server listening at http://localhost:8080');
+  console.log('Server listening at http://localhost:8000');
 });

@@ -1,0 +1,3048 @@
+Server listening at http://localhost:8080
+cluster node 0 start
+cluster node 1 start
+cluster node 2 start
+cluster node 3 start
+Mongo database connected!
+query-0 starts at time : 1623484929824
+Start finding data.
+Finish.
+query-0 ends at time : 1623484944705
+modify-0 starts at time: 1623484981539
+modify-0 ends at time: 1623484981577
+modify-1 starts at time: 1623484981866
+modify-1 ends at time: 1623484981886
+modify-2 starts at time: 1623484982152
+modify-2 ends at time: 1623484982156
+modify-3 starts at time: 1623484982467
+modify-3 ends at time: 1623484982470
+modify-4 starts at time: 1623484983659
+modify-4 ends at time: 1623484983664
+modify-5 starts at time: 1623484984721
+modify-6 starts at time: 1623484984722
+modify-7 starts at time: 1623484984725
+modify-8 starts at time: 1623484984726
+modify-9 starts at time: 1623484984726
+modify-10 starts at time: 1623484984731
+modify-5 ends at time: 1623484984761
+modify-6 ends at time: 1623484984761
+modify-7 ends at time: 1623484984761
+modify-8 ends at time: 1623484984762
+modify-9 ends at time: 1623484984764
+modify-10 ends at time: 1623484984764
+modify-11 starts at time: 1623484984864
+modify-11 ends at time: 1623484984873
+modify-12 starts at time: 1623484986861
+modify-13 starts at time: 1623484986864
+modify-12 ends at time: 1623484986867
+modify-13 ends at time: 1623484986870
+modify-14 starts at time: 1623484987352
+modify-14 ends at time: 1623484987356
+modify-15 starts at time: 1623484989029
+modify-15 ends at time: 1623484989033
+modify-16 starts at time: 1623484990312
+modify-16 ends at time: 1623484990315
+query-1 starts at time : 1623484995452
+Start finding data.
+modify-17 starts at time: 1623484996007
+modify-17 ends at time: 1623484996010
+Finish.
+query-1 ends at time : 1623484996464
+query-2 starts at time : 1623484996465
+Start finding data.
+Finish.
+query-2 ends at time : 1623484997420
+query-3 starts at time : 1623484997518
+Start finding data.
+Finish.
+query-3 ends at time : 1623484998487
+query-4 starts at time : 1623484998850
+Start finding data.
+Finish.
+query-4 ends at time : 1623484999771
+query-5 starts at time : 1623484999772
+Start finding data.
+Finish.
+query-5 ends at time : 1623485000717
+query-6 starts at time : 1623485000782
+Start finding data.
+modify-18 starts at time: 1623485001114
+modify-18 ends at time: 1623485001117
+Finish.
+query-6 ends at time : 1623485001735
+query-7 starts at time : 1623485001858
+Start finding data.
+Finish.
+query-7 ends at time : 1623485002843
+query-8 starts at time : 1623485002924
+Start finding data.
+Finish.
+query-8 ends at time : 1623485004017
+query-9 starts at time : 1623485004857
+Start finding data.
+Finish.
+query-9 ends at time : 1623485005775
+query-10 starts at time : 1623485005912
+Start finding data.
+Finish.
+query-10 ends at time : 1623485006811
+modify-19 starts at time: 1623485007958
+modify-19 ends at time: 1623485007962
+query-11 starts at time : 1623485008004
+Start finding data.
+Finish.
+query-11 ends at time : 1623485008920
+query-12 starts at time : 1623485011752
+Start finding data.
+Finish.
+query-12 ends at time : 1623485012701
+query-13 starts at time : 1623485012858
+Start finding data.
+Finish.
+query-13 ends at time : 1623485013778
+query-14 starts at time : 1623485013858
+Start finding data.
+Finish.
+query-14 ends at time : 1623485014782
+query-15 starts at time : 1623485014910
+Start finding data.
+Finish.
+query-15 ends at time : 1623485015828
+query-16 starts at time : 1623485016860
+Start finding data.
+Finish.
+query-16 ends at time : 1623485017799
+query-17 starts at time : 1623485017864
+Start finding data.
+Finish.
+query-17 ends at time : 1623485018783
+query-18 starts at time : 1623485018910
+Start finding data.
+Finish.
+query-18 ends at time : 1623485019891
+query-19 starts at time : 1623485020859
+Start finding data.
+Finish.
+query-19 ends at time : 1623485021826
+query-20 starts at time : 1623485021923
+Start finding data.
+Finish.
+query-20 ends at time : 1623485022842
+modify-20 starts at time: 1623485026104
+query-21 starts at time : 1623485026107
+Start finding data.
+modify-20 ends at time: 1623485026112
+Finish.
+query-21 ends at time : 1623485027036
+query-22 starts at time : 1623485027969
+Start finding data.
+Finish.
+query-22 ends at time : 1623485028877
+query-23 starts at time : 1623485029866
+Start finding data.
+Finish.
+query-23 ends at time : 1623485030797
+query-24 starts at time : 1623485030862
+Start finding data.
+Finish.
+query-24 ends at time : 1623485031773
+query-25 starts at time : 1623485032055
+Start finding data.
+Finish.
+query-25 ends at time : 1623485032984
+query-26 starts at time : 1623485034258
+Start finding data.
+Finish.
+query-26 ends at time : 1623485035171
+query-27 starts at time : 1623485035861
+Start finding data.
+Finish.
+query-27 ends at time : 1623485036774
+query-28 starts at time : 1623485036904
+Start finding data.
+Finish.
+query-28 ends at time : 1623485037917
+query-29 starts at time : 1623485038969
+Start finding data.
+Finish.
+query-29 ends at time : 1623485039883
+query-30 starts at time : 1623485039959
+Start finding data.
+Finish.
+query-30 ends at time : 1623485040865
+query-31 starts at time : 1623485040884
+Start finding data.
+Finish.
+query-31 ends at time : 1623485041792
+query-32 starts at time : 1623485041864
+Start finding data.
+Finish.
+query-32 ends at time : 1623485042820
+query-33 starts at time : 1623485042906
+Start finding data.
+Finish.
+query-33 ends at time : 1623485043837
+query-34 starts at time : 1623485044872
+Start finding data.
+Finish.
+query-34 ends at time : 1623485045793
+query-35 starts at time : 1623485045910
+Start finding data.
+modify-21 starts at time: 1623485046260
+modify-21 ends at time: 1623485046262
+Finish.
+query-35 ends at time : 1623485046832
+query-36 starts at time : 1623485046902
+Start finding data.
+Finish.
+query-36 ends at time : 1623485048088
+query-37 starts at time : 1623485048868
+Start finding data.
+query-38 starts at time : 1623485049910
+Start finding data.
+Finish.
+query-37 ends at time : 1623485049934
+Finish.
+query-38 ends at time : 1623485050883
+query-39 starts at time : 1623485050901
+Start finding data.
+Finish.
+query-39 ends at time : 1623485051814
+query-40 starts at time : 1623485051875
+Start finding data.
+Finish.
+query-40 ends at time : 1623485052798
+query-41 starts at time : 1623485052904
+Start finding data.
+Finish.
+query-41 ends at time : 1623485053806
+query-42 starts at time : 1623485055270
+Start finding data.
+Finish.
+query-42 ends at time : 1623485056207
+query-43 starts at time : 1623485056862
+Start finding data.
+Finish.
+query-43 ends at time : 1623485057824
+query-44 starts at time : 1623485057902
+Start finding data.
+Finish.
+query-44 ends at time : 1623485058839
+query-45 starts at time : 1623485058902
+Start finding data.
+Finish.
+query-45 ends at time : 1623485059823
+query-46 starts at time : 1623485059864
+Start finding data.
+Finish.
+query-46 ends at time : 1623485060843
+query-47 starts at time : 1623485061208
+Start finding data.
+Finish.
+query-47 ends at time : 1623485062107
+query-48 starts at time : 1623485063258
+Start finding data.
+Finish.
+query-48 ends at time : 1623485064183
+query-49 starts at time : 1623485064910
+Start finding data.
+Finish.
+query-49 ends at time : 1623485065844
+query-50 starts at time : 1623485065869
+Start finding data.
+Finish.
+query-50 ends at time : 1623485066777
+query-51 starts at time : 1623485066912
+Start finding data.
+Finish.
+query-51 ends at time : 1623485067880
+query-52 starts at time : 1623485067904
+Start finding data.
+Finish.
+query-52 ends at time : 1623485069009
+query-53 starts at time : 1623485069037
+Start finding data.
+Finish.
+query-53 ends at time : 1623485070089
+query-54 starts at time : 1623485071162
+Start finding data.
+Finish.
+query-54 ends at time : 1623485072083
+query-55 starts at time : 1623485073514
+Start finding data.
+Finish.
+query-55 ends at time : 1623485074534
+query-56 starts at time : 1623485075466
+Start finding data.
+Finish.
+query-56 ends at time : 1623485076396
+query-57 starts at time : 1623485078033
+Start finding data.
+query-58 starts at time : 1623485078289
+Start finding data.
+modify-22 starts at time: 1623485078370
+modify-22 ends at time: 1623485078373
+query-59 starts at time : 1623485078858
+Start finding data.
+query-60 starts at time : 1623485079860
+Start finding data.
+Finish.
+query-57 ends at time : 1623485080222
+Finish.
+query-58 ends at time : 1623485080387
+query-61 starts at time : 1623485080916
+Start finding data.
+Finish.
+query-59 ends at time : 1623485081437
+query-62 starts at time : 1623485081966
+Start finding data.
+Finish.
+query-60 ends at time : 1623485082188
+Finish.
+query-61 ends at time : 1623485083094
+Finish.
+query-62 ends at time : 1623485083484
+query-63 starts at time : 1623485083874
+Start finding data.
+Finish.
+query-63 ends at time : 1623485084768
+query-64 starts at time : 1623485084861
+Start finding data.
+Finish.
+query-64 ends at time : 1623485085761
+query-65 starts at time : 1623485085802
+Start finding data.
+Finish.
+query-65 ends at time : 1623485086723
+query-66 starts at time : 1623485086736
+Start finding data.
+modify-23 starts at time: 1623485086778
+modify-23 ends at time: 1623485086780
+modify-24 starts at time: 1623485087085
+modify-24 ends at time: 1623485087087
+modify-25 starts at time: 1623485087378
+modify-25 ends at time: 1623485087380
+query-67 starts at time : 1623485087686
+Start finding data.
+modify-26 starts at time: 1623485087694
+modify-26 ends at time: 1623485087696
+Finish.
+query-66 ends at time : 1623485087825
+modify-27 starts at time: 1623485087982
+modify-27 ends at time: 1623485087985
+modify-28 starts at time: 1623485088281
+modify-28 ends at time: 1623485088283
+modify-29 starts at time: 1623485088584
+modify-29 ends at time: 1623485088587
+Finish.
+query-67 ends at time : 1623485088772
+query-68 starts at time : 1623485088866
+Start finding data.
+modify-30 starts at time: 1623485088894
+modify-30 ends at time: 1623485088896
+modify-31 starts at time: 1623485089186
+modify-31 ends at time: 1623485089189
+modify-32 starts at time: 1623485089500
+modify-32 ends at time: 1623485089503
+modify-33 starts at time: 1623485089792
+modify-33 ends at time: 1623485089795
+query-69 starts at time : 1623485089869
+Start finding data.
+Finish.
+query-68 ends at time : 1623485089913
+Finish.
+query-69 ends at time : 1623485090794
+query-70 starts at time : 1623485090870
+Start finding data.
+modify-34 starts at time: 1623485090960
+modify-34 ends at time: 1623485090963
+Finish.
+query-70 ends at time : 1623485091797
+query-71 starts at time : 1623485091870
+Start finding data.
+modify-35 starts at time: 1623485091928
+modify-35 ends at time: 1623485091932
+Finish.
+query-71 ends at time : 1623485092810
+query-72 starts at time : 1623485092902
+Start finding data.
+modify-36 starts at time: 1623485093323
+modify-36 ends at time: 1623485093326
+query-73 starts at time : 1623485093869
+Start finding data.
+Finish.
+query-72 ends at time : 1623485093885
+query-74 starts at time : 1623485094860
+Start finding data.
+Finish.
+query-73 ends at time : 1623485095038
+modify-37 starts at time: 1623485095318
+modify-37 ends at time: 1623485095321
+query-75 starts at time : 1623485095866
+Start finding data.
+Finish.
+query-74 ends at time : 1623485096403
+Finish.
+query-75 ends at time : 1623485097029
+query-76 starts at time : 1623485097048
+Start finding data.
+modify-38 starts at time: 1623485097116
+modify-38 ends at time: 1623485097118
+Finish.
+query-76 ends at time : 1623485098084
+query-77 starts at time : 1623485098914
+Start finding data.
+Finish.
+query-77 ends at time : 1623485099807
+query-78 starts at time : 1623485099866
+Start finding data.
+Finish.
+query-78 ends at time : 1623485100757
+query-79 starts at time : 1623485100868
+Start finding data.
+modify-39 starts at time: 1623485101010
+modify-39 ends at time: 1623485101012
+query-80 starts at time : 1623485101865
+Start finding data.
+Finish.
+query-79 ends at time : 1623485101947
+Finish.
+query-80 ends at time : 1623485102828
+query-81 starts at time : 1623485102910
+Start finding data.
+Finish.
+query-81 ends at time : 1623485103827
+query-82 starts at time : 1623485103920
+Start finding data.
+Finish.
+query-82 ends at time : 1623485104816
+query-83 starts at time : 1623485105543
+Start finding data.
+query-84 starts at time : 1623485105904
+Start finding data.
+Finish.
+query-83 ends at time : 1623485106945
+Finish.
+query-84 ends at time : 1623485107308
+modify-40 starts at time: 1623485107862
+modify-40 ends at time: 1623485107865
+query-85 starts at time : 1623485107945
+Start finding data.
+query-86 starts at time : 1623485107945
+Start finding data.
+modify-41 starts at time: 1623485108102
+modify-41 ends at time: 1623485108105
+query-87 starts at time : 1623485108860
+Start finding data.
+query-88 starts at time : 1623485109914
+Start finding data.
+Finish.
+query-85 ends at time : 1623485110046
+Finish.
+query-86 ends at time : 1623485110505
+query-89 starts at time : 1623485110887
+Start finding data.
+Finish.
+query-87 ends at time : 1623485111493
+query-90 starts at time : 1623485111860
+Start finding data.
+Finish.
+query-88 ends at time : 1623485112417
+Finish.
+query-89 ends at time : 1623485112657
+query-91 starts at time : 1623485113118
+Start finding data.
+Finish.
+query-90 ends at time : 1623485113563
+Finish.
+query-91 ends at time : 1623485114225
+query-92 starts at time : 1623485117358
+Start finding data.
+Finish.
+query-92 ends at time : 1623485118332
+query-93 starts at time : 1623485118870
+Start finding data.
+Finish.
+query-93 ends at time : 1623485119857
+query-94 starts at time : 1623485119876
+Start finding data.
+Finish.
+query-94 ends at time : 1623485120849
+query-95 starts at time : 1623485120862
+Start finding data.
+Finish.
+query-95 ends at time : 1623485121773
+query-96 starts at time : 1623485122408
+Start finding data.
+Finish.
+query-96 ends at time : 1623485123356
+query-97 starts at time : 1623485124810
+Start finding data.
+modify-42 starts at time: 1623485125106
+modify-42 ends at time: 1623485125109
+Finish.
+query-97 ends at time : 1623485125802
+query-98 starts at time : 1623485125862
+Start finding data.
+Finish.
+query-98 ends at time : 1623485126829
+query-99 starts at time : 1623485127018
+Start finding data.
+Finish.
+query-99 ends at time : 1623485127942
+query-100 starts at time : 1623485129207
+Start finding data.
+Finish.
+query-100 ends at time : 1623485130138
+query-101 starts at time : 1623485132360
+Start finding data.
+Finish.
+query-101 ends at time : 1623485133292
+query-102 starts at time : 1623485133862
+Start finding data.
+Finish.
+query-102 ends at time : 1623485134779
+query-103 starts at time : 1623485134862
+Start finding data.
+Finish.
+query-103 ends at time : 1623485135783
+query-104 starts at time : 1623485135902
+Start finding data.
+Finish.
+query-104 ends at time : 1623485136830
+query-105 starts at time : 1623485136872
+Start finding data.
+Finish.
+query-105 ends at time : 1623485137824
+query-106 starts at time : 1623485137918
+Start finding data.
+Finish.
+query-106 ends at time : 1623485138882
+query-107 starts at time : 1623485138904
+Start finding data.
+Finish.
+query-107 ends at time : 1623485139820
+query-108 starts at time : 1623485139879
+Start finding data.
+Finish.
+query-108 ends at time : 1623485140799
+query-109 starts at time : 1623485140912
+Start finding data.
+Finish.
+query-109 ends at time : 1623485141874
+query-110 starts at time : 1623485141888
+Start finding data.
+Finish.
+query-110 ends at time : 1623485142822
+query-111 starts at time : 1623485142912
+Start finding data.
+Finish.
+query-111 ends at time : 1623485143825
+query-112 starts at time : 1623485144127
+Start finding data.
+Finish.
+query-112 ends at time : 1623485145044
+query-113 starts at time : 1623485145551
+Start finding data.
+Finish.
+query-113 ends at time : 1623485146466
+query-114 starts at time : 1623485146594
+Start finding data.
+Finish.
+query-114 ends at time : 1623485147527
+query-115 starts at time : 1623485147914
+Start finding data.
+query-116 starts at time : 1623485148862
+Start finding data.
+Finish.
+query-115 ends at time : 1623485148879
+Finish.
+query-116 ends at time : 1623485149766
+query-117 starts at time : 1623485150012
+Start finding data.
+query-118 starts at time : 1623485150864
+Start finding data.
+Finish.
+query-117 ends at time : 1623485150934
+modify-43 starts at time: 1623485151658
+modify-43 ends at time: 1623485151661
+Finish.
+query-118 ends at time : 1623485151858
+query-119 starts at time : 1623485151864
+Start finding data.
+Finish.
+query-119 ends at time : 1623485152825
+query-120 starts at time : 1623485152906
+Start finding data.
+Finish.
+query-120 ends at time : 1623485153810
+query-121 starts at time : 1623485153866
+Start finding data.
+Finish.
+query-121 ends at time : 1623485154784
+query-122 starts at time : 1623485154910
+Start finding data.
+Finish.
+query-122 ends at time : 1623485155831
+query-123 starts at time : 1623485155906
+Start finding data.
+query-124 starts at time : 1623485156868
+Start finding data.
+Finish.
+query-123 ends at time : 1623485157222
+query-125 starts at time : 1623485157861
+Start finding data.
+Finish.
+query-124 ends at time : 1623485158168
+query-126 starts at time : 1623485158908
+Start finding data.
+Finish.
+query-125 ends at time : 1623485159020
+query-127 starts at time : 1623485159964
+Start finding data.
+Finish.
+query-126 ends at time : 1623485160054
+query-128 starts at time : 1623485160868
+Start finding data.
+Finish.
+query-127 ends at time : 1623485161204
+query-129 starts at time : 1623485161906
+Start finding data.
+Finish.
+query-128 ends at time : 1623485162027
+query-130 starts at time : 1623485162916
+Start finding data.
+Finish.
+query-129 ends at time : 1623485162948
+Finish.
+query-130 ends at time : 1623485163861
+query-131 starts at time : 1623485163862
+Start finding data.
+Finish.
+query-131 ends at time : 1623485164798
+query-132 starts at time : 1623485165465
+Start finding data.
+Finish.
+query-132 ends at time : 1623485166387
+query-133 starts at time : 1623485166864
+Start finding data.
+Finish.
+query-133 ends at time : 1623485167789
+query-134 starts at time : 1623485168757
+Start finding data.
+Finish.
+query-134 ends at time : 1623485169668
+query-135 starts at time : 1623485169866
+Start finding data.
+Finish.
+query-135 ends at time : 1623485170780
+query-136 starts at time : 1623485170910
+Start finding data.
+Finish.
+query-136 ends at time : 1623485171836
+query-137 starts at time : 1623485171908
+Start finding data.
+Finish.
+query-137 ends at time : 1623485172847
+query-138 starts at time : 1623485173174
+Start finding data.
+Finish.
+query-138 ends at time : 1623485174112
+query-139 starts at time : 1623485174872
+Start finding data.
+Finish.
+query-139 ends at time : 1623485175769
+query-140 starts at time : 1623485176608
+Start finding data.
+Finish.
+query-140 ends at time : 1623485177723
+query-141 starts at time : 1623485177866
+Start finding data.
+query-142 starts at time : 1623485178862
+Start finding data.
+Finish.
+query-141 ends at time : 1623485179001
+query-143 starts at time : 1623485179862
+Start finding data.
+Finish.
+query-142 ends at time : 1623485179872
+Finish.
+query-143 ends at time : 1623485180818
+query-144 starts at time : 1623485181067
+Start finding data.
+Finish.
+query-144 ends at time : 1623485181985
+query-145 starts at time : 1623485182968
+Start finding data.
+query-146 starts at time : 1623485183860
+Start finding data.
+Finish.
+query-145 ends at time : 1623485184233
+query-147 starts at time : 1623485184866
+Start finding data.
+Finish.
+query-146 ends at time : 1623485185059
+modify-44 starts at time: 1623485185558
+modify-44 ends at time: 1623485185560
+query-148 starts at time : 1623485185864
+Start finding data.
+Finish.
+query-147 ends at time : 1623485185875
+Finish.
+query-148 ends at time : 1623485186763
+query-149 starts at time : 1623485186874
+Start finding data.
+query-150 starts at time : 1623485187862
+Start finding data.
+Finish.
+query-149 ends at time : 1623485188199
+query-151 starts at time : 1623485188865
+Start finding data.
+Finish.
+query-150 ends at time : 1623485189108
+query-152 starts at time : 1623485189868
+Start finding data.
+Finish.
+query-151 ends at time : 1623485189940
+Finish.
+query-152 ends at time : 1623485190804
+query-153 starts at time : 1623485191756
+Start finding data.
+Finish.
+query-153 ends at time : 1623485192691
+query-154 starts at time : 1623485193754
+Start finding data.
+Finish.
+query-154 ends at time : 1623485194667
+query-155 starts at time : 1623485194968
+Start finding data.
+query-156 starts at time : 1623485195872
+Start finding data.
+Finish.
+query-155 ends at time : 1623485195884
+Finish.
+query-156 ends at time : 1623485196814
+query-157 starts at time : 1623485196870
+Start finding data.
+Finish.
+query-157 ends at time : 1623485197806
+query-158 starts at time : 1623485197864
+Start finding data.
+Finish.
+query-158 ends at time : 1623485198791
+query-159 starts at time : 1623485198914
+Start finding data.
+Finish.
+query-159 ends at time : 1623485199843
+query-160 starts at time : 1623485199912
+Start finding data.
+modify-45 starts at time: 1623485200054
+modify-45 ends at time: 1623485200057
+Finish.
+query-160 ends at time : 1623485200851
+query-161 starts at time : 1623485200868
+Start finding data.
+Finish.
+query-161 ends at time : 1623485201827
+query-162 starts at time : 1623485201910
+Start finding data.
+Finish.
+query-162 ends at time : 1623485202826
+query-163 starts at time : 1623485202870
+Start finding data.
+Finish.
+query-163 ends at time : 1623485203771
+query-164 starts at time : 1623485203960
+Start finding data.
+Finish.
+query-164 ends at time : 1623485204873
+query-165 starts at time : 1623485204894
+Start finding data.
+Finish.
+query-165 ends at time : 1623485205783
+query-166 starts at time : 1623485205872
+Start finding data.
+Finish.
+query-166 ends at time : 1623485206779
+query-167 starts at time : 1623485206868
+Start finding data.
+Finish.
+query-167 ends at time : 1623485207783
+query-168 starts at time : 1623485207868
+Start finding data.
+Finish.
+query-168 ends at time : 1623485208780
+query-169 starts at time : 1623485208874
+Start finding data.
+Finish.
+query-169 ends at time : 1623485209802
+query-170 starts at time : 1623485209966
+Start finding data.
+query-171 starts at time : 1623485210866
+Start finding data.
+Finish.
+query-170 ends at time : 1623485211237
+query-172 starts at time : 1623485211920
+Start finding data.
+Finish.
+query-171 ends at time : 1623485212040
+query-173 starts at time : 1623485212878
+Start finding data.
+Finish.
+query-172 ends at time : 1623485212908
+Finish.
+query-173 ends at time : 1623485213799
+query-174 starts at time : 1623485213866
+Start finding data.
+Finish.
+query-174 ends at time : 1623485214770
+query-175 starts at time : 1623485214970
+Start finding data.
+query-176 starts at time : 1623485215866
+Start finding data.
+Finish.
+query-175 ends at time : 1623485215875
+Finish.
+query-176 ends at time : 1623485216790
+query-177 starts at time : 1623485216868
+Start finding data.
+query-178 starts at time : 1623485217864
+Start finding data.
+Finish.
+query-177 ends at time : 1623485217994
+Finish.
+query-178 ends at time : 1623485218836
+query-179 starts at time : 1623485218912
+Start finding data.
+Finish.
+query-179 ends at time : 1623485219856
+query-180 starts at time : 1623485219866
+Start finding data.
+Finish.
+query-180 ends at time : 1623485220785
+query-181 starts at time : 1623485221472
+Start finding data.
+Finish.
+query-181 ends at time : 1623485222374
+query-182 starts at time : 1623485222868
+Start finding data.
+Finish.
+query-182 ends at time : 1623485223776
+query-183 starts at time : 1623485223862
+Start finding data.
+Finish.
+query-183 ends at time : 1623485224762
+query-184 starts at time : 1623485224908
+Start finding data.
+Finish.
+query-184 ends at time : 1623485225809
+query-185 starts at time : 1623485226011
+Start finding data.
+query-186 starts at time : 1623485226865
+Start finding data.
+Finish.
+query-185 ends at time : 1623485226957
+Finish.
+query-186 ends at time : 1623485227845
+query-187 starts at time : 1623485227901
+Start finding data.
+Finish.
+query-187 ends at time : 1623485228833
+query-188 starts at time : 1623485228870
+Start finding data.
+Finish.
+query-188 ends at time : 1623485229822
+query-189 starts at time : 1623485229922
+Start finding data.
+Finish.
+query-189 ends at time : 1623485230813
+query-190 starts at time : 1623485230916
+Start finding data.
+Finish.
+query-190 ends at time : 1623485231831
+query-191 starts at time : 1623485232112
+Start finding data.
+Finish.
+query-191 ends at time : 1623485233063
+query-192 starts at time : 1623485234265
+Start finding data.
+Finish.
+query-192 ends at time : 1623485235155
+query-193 starts at time : 1623485235864
+Start finding data.
+Finish.
+query-193 ends at time : 1623485236798
+query-194 starts at time : 1623485236864
+Start finding data.
+Finish.
+query-194 ends at time : 1623485237844
+query-195 starts at time : 1623485237904
+Start finding data.
+query-196 starts at time : 1623485238869
+Start finding data.
+Finish.
+query-195 ends at time : 1623485239156
+query-197 starts at time : 1623485239875
+Start finding data.
+Finish.
+query-196 ends at time : 1623485240258
+query-198 starts at time : 1623485240866
+Start finding data.
+Finish.
+query-197 ends at time : 1623485241230
+query-199 starts at time : 1623485241916
+Start finding data.
+Finish.
+query-198 ends at time : 1623485242120
+Finish.
+query-199 ends at time : 1623485243039
+query-200 starts at time : 1623485243059
+Start finding data.
+query-201 starts at time : 1623485243872
+Start finding data.
+Finish.
+query-200 ends at time : 1623485244208
+query-202 starts at time : 1623485244910
+Start finding data.
+Finish.
+query-201 ends at time : 1623485244961
+Finish.
+query-202 ends at time : 1623485245840
+query-203 starts at time : 1623485245912
+Start finding data.
+Finish.
+query-203 ends at time : 1623485246819
+query-204 starts at time : 1623485246868
+Start finding data.
+Finish.
+query-204 ends at time : 1623485247796
+query-205 starts at time : 1623485248016
+Start finding data.
+query-206 starts at time : 1623485248862
+Start finding data.
+Finish.
+query-205 ends at time : 1623485249196
+Finish.
+query-206 ends at time : 1623485249972
+query-207 starts at time : 1623485249986
+Start finding data.
+Finish.
+query-207 ends at time : 1623485250914
+query-208 starts at time : 1623485251112
+Start finding data.
+Finish.
+query-208 ends at time : 1623485252020
+query-209 starts at time : 1623485252870
+Start finding data.
+Finish.
+query-209 ends at time : 1623485253781
+query-210 starts at time : 1623485253956
+Start finding data.
+Finish.
+query-210 ends at time : 1623485254861
+query-211 starts at time : 1623485254866
+Start finding data.
+Finish.
+query-211 ends at time : 1623485255790
+query-212 starts at time : 1623485256870
+Start finding data.
+Finish.
+query-212 ends at time : 1623485257816
+query-213 starts at time : 1623485257864
+Start finding data.
+Finish.
+query-213 ends at time : 1623485258778
+query-214 starts at time : 1623485258960
+Start finding data.
+query-215 starts at time : 1623485259866
+Start finding data.
+Finish.
+query-214 ends at time : 1623485259924
+Finish.
+query-215 ends at time : 1623485260808
+query-216 starts at time : 1623485260870
+Start finding data.
+Finish.
+query-216 ends at time : 1623485261808
+query-217 starts at time : 1623485262514
+Start finding data.
+Finish.
+query-217 ends at time : 1623485263435
+query-218 starts at time : 1623485263876
+Start finding data.
+Finish.
+query-218 ends at time : 1623485264795
+query-219 starts at time : 1623485264968
+Start finding data.
+query-220 starts at time : 1623485265936
+Start finding data.
+Finish.
+query-219 ends at time : 1623485266071
+query-221 starts at time : 1623485266890
+Start finding data.
+Finish.
+query-220 ends at time : 1623485266933
+Finish.
+query-221 ends at time : 1623485267852
+query-222 starts at time : 1623485267864
+Start finding data.
+modify-46 starts at time: 1623485267906
+modify-46 ends at time: 1623485267908
+Finish.
+query-222 ends at time : 1623485268801
+query-223 starts at time : 1623485268924
+Start finding data.
+Finish.
+query-223 ends at time : 1623485269866
+query-224 starts at time : 1623485269868
+Start finding data.
+Finish.
+query-224 ends at time : 1623485270782
+query-225 starts at time : 1623485270878
+Start finding data.
+Finish.
+query-225 ends at time : 1623485271791
+query-226 starts at time : 1623485271914
+Start finding data.
+Finish.
+query-226 ends at time : 1623485272881
+query-227 starts at time : 1623485272900
+Start finding data.
+Finish.
+query-227 ends at time : 1623485273823
+query-228 starts at time : 1623485273864
+Start finding data.
+Finish.
+query-228 ends at time : 1623485274780
+query-229 starts at time : 1623485274956
+Start finding data.
+Finish.
+query-229 ends at time : 1623485275865
+query-230 starts at time : 1623485275872
+Start finding data.
+Finish.
+query-230 ends at time : 1623485276809
+query-231 starts at time : 1623485276868
+Start finding data.
+Finish.
+query-231 ends at time : 1623485277895
+query-232 starts at time : 1623485277946
+Start finding data.
+query-233 starts at time : 1623485278866
+Start finding data.
+Finish.
+query-232 ends at time : 1623485278933
+query-234 starts at time : 1623485279871
+Start finding data.
+Finish.
+query-233 ends at time : 1623485279907
+Finish.
+query-234 ends at time : 1623485280806
+query-235 starts at time : 1623485281510
+Start finding data.
+Finish.
+query-235 ends at time : 1623485282419
+query-236 starts at time : 1623485282868
+Start finding data.
+Finish.
+query-236 ends at time : 1623485283772
+query-237 starts at time : 1623485283866
+Start finding data.
+Finish.
+query-237 ends at time : 1623485284746
+query-238 starts at time : 1623485284862
+Start finding data.
+Finish.
+query-238 ends at time : 1623485285765
+query-239 starts at time : 1623485285868
+Start finding data.
+Finish.
+query-239 ends at time : 1623485286792
+query-240 starts at time : 1623485286920
+Start finding data.
+Finish.
+query-240 ends at time : 1623485287850
+query-241 starts at time : 1623485287864
+Start finding data.
+Finish.
+query-241 ends at time : 1623485288758
+query-242 starts at time : 1623485289306
+Start finding data.
+Finish.
+query-242 ends at time : 1623485290252
+query-243 starts at time : 1623485290871
+Start finding data.
+Finish.
+query-243 ends at time : 1623485291790
+query-244 starts at time : 1623485291869
+Start finding data.
+Finish.
+query-244 ends at time : 1623485292912
+query-245 starts at time : 1623485292934
+Start finding data.
+Finish.
+query-245 ends at time : 1623485293851
+query-246 starts at time : 1623485293864
+Start finding data.
+Finish.
+query-246 ends at time : 1623485294766
+query-247 starts at time : 1623485294908
+Start finding data.
+Finish.
+query-247 ends at time : 1623485295824
+query-248 starts at time : 1623485296420
+Start finding data.
+Finish.
+query-248 ends at time : 1623485297382
+query-249 starts at time : 1623485298456
+Start finding data.
+Finish.
+query-249 ends at time : 1623485299437
+query-250 starts at time : 1623485300411
+Start finding data.
+Finish.
+query-250 ends at time : 1623485301372
+query-251 starts at time : 1623485301869
+Start finding data.
+Finish.
+query-251 ends at time : 1623485302803
+query-252 starts at time : 1623485302879
+Start finding data.
+Finish.
+query-252 ends at time : 1623485303802
+query-253 starts at time : 1623485303910
+Start finding data.
+Finish.
+query-253 ends at time : 1623485304836
+query-254 starts at time : 1623485304916
+Start finding data.
+Finish.
+query-254 ends at time : 1623485305823
+query-255 starts at time : 1623485306009
+Start finding data.
+query-256 starts at time : 1623485306864
+Start finding data.
+Finish.
+query-255 ends at time : 1623485307009
+Finish.
+query-256 ends at time : 1623485307846
+query-257 starts at time : 1623485307914
+Start finding data.
+Finish.
+query-257 ends at time : 1623485308831
+query-258 starts at time : 1623485308912
+Start finding data.
+query-259 starts at time : 1623485309866
+Start finding data.
+Finish.
+query-258 ends at time : 1623485310048
+query-260 starts at time : 1623485310862
+Start finding data.
+Finish.
+query-259 ends at time : 1623485310874
+Finish.
+query-260 ends at time : 1623485311766
+query-261 starts at time : 1623485313826
+Start finding data.
+Finish.
+query-261 ends at time : 1623485314731
+query-262 starts at time : 1623485314866
+Start finding data.
+Finish.
+query-262 ends at time : 1623485315774
+query-263 starts at time : 1623485315962
+Start finding data.
+Finish.
+query-263 ends at time : 1623485316892
+query-264 starts at time : 1623485316908
+Start finding data.
+query-265 starts at time : 1623485317915
+Start finding data.
+Finish.
+query-264 ends at time : 1623485317931
+query-266 starts at time : 1623485318869
+Start finding data.
+Finish.
+query-265 ends at time : 1623485319023
+query-267 starts at time : 1623485319866
+Start finding data.
+Finish.
+query-266 ends at time : 1623485319982
+query-268 starts at time : 1623485320864
+Start finding data.
+Finish.
+query-267 ends at time : 1623485320955
+Finish.
+query-268 ends at time : 1623485321873
+query-269 starts at time : 1623485321894
+Start finding data.
+Finish.
+query-269 ends at time : 1623485322855
+query-270 starts at time : 1623485322865
+Start finding data.
+Finish.
+query-270 ends at time : 1623485323779
+query-271 starts at time : 1623485323961
+Start finding data.
+Finish.
+query-271 ends at time : 1623485324875
+query-272 starts at time : 1623485324886
+Start finding data.
+Finish.
+query-272 ends at time : 1623485325775
+query-273 starts at time : 1623485326206
+Start finding data.
+Finish.
+query-273 ends at time : 1623485327137
+query-274 starts at time : 1623485327864
+Start finding data.
+Finish.
+query-274 ends at time : 1623485328777
+query-275 starts at time : 1623485329358
+Start finding data.
+Finish.
+query-275 ends at time : 1623485330300
+query-276 starts at time : 1623485330866
+Start finding data.
+Finish.
+query-276 ends at time : 1623485331767
+query-277 starts at time : 1623485331867
+Start finding data.
+Finish.
+query-277 ends at time : 1623485332799
+query-278 starts at time : 1623485332870
+Start finding data.
+Finish.
+query-278 ends at time : 1623485333780
+query-279 starts at time : 1623485333864
+Start finding data.
+Finish.
+query-279 ends at time : 1623485334787
+query-280 starts at time : 1623485334876
+Start finding data.
+Finish.
+query-280 ends at time : 1623485335788
+query-281 starts at time : 1623485335870
+Start finding data.
+Finish.
+query-281 ends at time : 1623485336794
+query-282 starts at time : 1623485336870
+Start finding data.
+Finish.
+query-282 ends at time : 1623485337812
+query-283 starts at time : 1623485337943
+Start finding data.
+Finish.
+query-283 ends at time : 1623485338840
+query-284 starts at time : 1623485338940
+Start finding data.
+query-285 starts at time : 1623485339910
+Start finding data.
+Finish.
+query-284 ends at time : 1623485339981
+query-286 starts at time : 1623485340863
+Start finding data.
+Finish.
+query-285 ends at time : 1623485340944
+Finish.
+query-286 ends at time : 1623485341798
+query-287 starts at time : 1623485341864
+Start finding data.
+Finish.
+query-287 ends at time : 1623485342803
+query-288 starts at time : 1623485342906
+Start finding data.
+Finish.
+query-288 ends at time : 1623485343846
+query-289 starts at time : 1623485343912
+Start finding data.
+Finish.
+query-289 ends at time : 1623485344824
+query-290 starts at time : 1623485344972
+Start finding data.
+query-291 starts at time : 1623485345864
+Start finding data.
+Finish.
+query-290 ends at time : 1623485345874
+Finish.
+query-291 ends at time : 1623485346790
+query-292 starts at time : 1623485346868
+Start finding data.
+query-293 starts at time : 1623485347866
+Start finding data.
+Finish.
+query-292 ends at time : 1623485347991
+Finish.
+query-293 ends at time : 1623485348844
+query-294 starts at time : 1623485348908
+Start finding data.
+Finish.
+query-294 ends at time : 1623485349821
+query-295 starts at time : 1623485350065
+Start finding data.
+query-296 starts at time : 1623485350876
+Start finding data.
+Finish.
+query-295 ends at time : 1623485351077
+query-297 starts at time : 1623485351864
+Start finding data.
+Finish.
+query-296 ends at time : 1623485351879
+modify-47 starts at time: 1623485352760
+modify-47 ends at time: 1623485352763
+Finish.
+query-297 ends at time : 1623485352811
+query-298 starts at time : 1623485353122
+Start finding data.
+query-299 starts at time : 1623485353864
+Start finding data.
+Finish.
+query-298 ends at time : 1623485354174
+query-300 starts at time : 1623485354874
+Start finding data.
+Finish.
+query-299 ends at time : 1623485354949
+Finish.
+query-300 ends at time : 1623485355823
+query-301 starts at time : 1623485355870
+Start finding data.
+query-302 starts at time : 1623485356864
+Start finding data.
+Finish.
+query-301 ends at time : 1623485356898
+query-303 starts at time : 1623485357912
+Start finding data.
+Finish.
+query-302 ends at time : 1623485357934
+query-304 starts at time : 1623485358868
+Start finding data.
+Finish.
+query-303 ends at time : 1623485359002
+query-305 starts at time : 1623485359872
+Start finding data.
+Finish.
+query-304 ends at time : 1623485360131
+query-306 starts at time : 1623485360866
+Start finding data.
+Finish.
+query-305 ends at time : 1623485361341
+query-307 starts at time : 1623485361864
+Start finding data.
+Finish.
+query-306 ends at time : 1623485362316
+query-308 starts at time : 1623485362910
+Start finding data.
+Finish.
+query-307 ends at time : 1623485363317
+query-309 starts at time : 1623485363918
+Start finding data.
+Finish.
+query-308 ends at time : 1623485364306
+query-310 starts at time : 1623485364865
+Start finding data.
+Finish.
+query-309 ends at time : 1623485365363
+query-311 starts at time : 1623485365916
+Start finding data.
+Finish.
+query-310 ends at time : 1623485366306
+query-312 starts at time : 1623485366868
+Start finding data.
+Finish.
+query-311 ends at time : 1623485367118
+query-313 starts at time : 1623485367870
+Start finding data.
+Finish.
+query-312 ends at time : 1623485367961
+Finish.
+query-313 ends at time : 1623485368822
+query-314 starts at time : 1623485368871
+Start finding data.
+Finish.
+query-314 ends at time : 1623485369774
+query-315 starts at time : 1623485370072
+Start finding data.
+query-316 starts at time : 1623485370872
+Start finding data.
+Finish.
+query-315 ends at time : 1623485371293
+query-317 starts at time : 1623485371881
+Start finding data.
+Finish.
+query-316 ends at time : 1623485372030
+query-318 starts at time : 1623485372872
+Start finding data.
+Finish.
+query-317 ends at time : 1623485372886
+Finish.
+query-318 ends at time : 1623485373783
+query-319 starts at time : 1623485373914
+Start finding data.
+query-320 starts at time : 1623485374868
+Start finding data.
+Finish.
+query-319 ends at time : 1623485375032
+Finish.
+query-320 ends at time : 1623485375850
+query-321 starts at time : 1623485375874
+Start finding data.
+Finish.
+query-321 ends at time : 1623485376790
+query-322 starts at time : 1623485376924
+Start finding data.
+Finish.
+query-322 ends at time : 1623485377848
+query-323 starts at time : 1623485377912
+Start finding data.
+Finish.
+query-323 ends at time : 1623485378826
+query-324 starts at time : 1623485378908
+Start finding data.
+Finish.
+query-324 ends at time : 1623485379814
+query-325 starts at time : 1623485379916
+Start finding data.
+Finish.
+query-325 ends at time : 1623485380859
+query-326 starts at time : 1623485380866
+Start finding data.
+Finish.
+query-326 ends at time : 1623485381831
+query-327 starts at time : 1623485381915
+Start finding data.
+Finish.
+query-327 ends at time : 1623485382861
+query-328 starts at time : 1623485382870
+Start finding data.
+Finish.
+query-328 ends at time : 1623485383791
+query-329 starts at time : 1623485383920
+Start finding data.
+Finish.
+query-329 ends at time : 1623485384835
+query-330 starts at time : 1623485384864
+Start finding data.
+Finish.
+query-330 ends at time : 1623485385777
+query-331 starts at time : 1623485386172
+Start finding data.
+query-332 starts at time : 1623485386865
+Start finding data.
+Finish.
+query-331 ends at time : 1623485387280
+Finish.
+query-332 ends at time : 1623485387986
+query-333 starts at time : 1623485387998
+Start finding data.
+query-334 starts at time : 1623485388864
+Start finding data.
+Finish.
+query-333 ends at time : 1623485388936
+Finish.
+query-334 ends at time : 1623485389794
+query-335 starts at time : 1623485389918
+Start finding data.
+Finish.
+query-335 ends at time : 1623485390859
+query-336 starts at time : 1623485390864
+Start finding data.
+Finish.
+query-336 ends at time : 1623485391766
+query-337 starts at time : 1623485392211
+Start finding data.
+Finish.
+query-337 ends at time : 1623485393161
+query-338 starts at time : 1623485395265
+Start finding data.
+query-339 starts at time : 1623485396867
+Start finding data.
+query-340 starts at time : 1623485398012
+Start finding data.
+Finish.
+query-338 ends at time : 1623485398547
+query-341 starts at time : 1623485399470
+Start finding data.
+Finish.
+query-339 ends at time : 1623485399996
+query-342 starts at time : 1623485400920
+Start finding data.
+Finish.
+query-340 ends at time : 1623485401097
+Finish.
+query-341 ends at time : 1623485402008
+query-343 starts at time : 1623485402031
+Start finding data.
+query-344 starts at time : 1623485402912
+Start finding data.
+Finish.
+query-342 ends at time : 1623485403198
+Finish.
+query-343 ends at time : 1623485404010
+query-345 starts at time : 1623485404029
+Start finding data.
+Finish.
+query-344 ends at time : 1623485405533
+query-346 starts at time : 1623485405579
+Start finding data.
+Finish.
+query-345 ends at time : 1623485406119
+Finish.
+query-346 ends at time : 1623485407484
+query-347 starts at time : 1623485407516
+Start finding data.
+query-348 starts at time : 1623485408864
+Start finding data.
+Finish.
+query-347 ends at time : 1623485408921
+query-349 starts at time : 1623485409864
+Start finding data.
+query-350 starts at time : 1623485410864
+Start finding data.
+Finish.
+query-348 ends at time : 1623485411093
+query-351 starts at time : 1623485411967
+Start finding data.
+Finish.
+query-349 ends at time : 1623485412204
+query-352 starts at time : 1623485412865
+Start finding data.
+Finish.
+query-350 ends at time : 1623485413550
+query-353 starts at time : 1623485414578
+Start finding data.
+Finish.
+query-351 ends at time : 1623485414629
+Finish.
+query-352 ends at time : 1623485415184
+Finish.
+query-353 ends at time : 1623485415806
+query-354 starts at time : 1623485415868
+Start finding data.
+query-355 starts at time : 1623485416913
+Start finding data.
+Finish.
+query-354 ends at time : 1623485417128
+query-356 starts at time : 1623485418022
+Start finding data.
+query-357 starts at time : 1623485418913
+Start finding data.
+Finish.
+query-355 ends at time : 1623485418946
+query-358 starts at time : 1623485419933
+Start finding data.
+Finish.
+query-356 ends at time : 1623485420842
+query-359 starts at time : 1623485420920
+Start finding data.
+query-360 starts at time : 1623485421864
+Start finding data.
+Finish.
+query-357 ends at time : 1623485422115
+query-361 starts at time : 1623485422872
+Start finding data.
+Finish.
+query-358 ends at time : 1623485423332
+query-362 starts at time : 1623485423866
+Start finding data.
+Finish.
+query-359 ends at time : 1623485424398
+query-363 starts at time : 1623485424876
+Start finding data.
+Finish.
+query-360 ends at time : 1623485425477
+query-364 starts at time : 1623485425869
+Start finding data.
+Finish.
+query-361 ends at time : 1623485427679
+Finish.
+query-362 ends at time : 1623485427684
+query-365 starts at time : 1623485427700
+Start finding data.
+Finish.
+query-363 ends at time : 1623485428583
+query-366 starts at time : 1623485428868
+Start finding data.
+Finish.
+query-364 ends at time : 1623485429279
+query-367 starts at time : 1623485429874
+Start finding data.
+Finish.
+query-365 ends at time : 1623485430705
+query-368 starts at time : 1623485430873
+Start finding data.
+Finish.
+query-366 ends at time : 1623485431771
+query-369 starts at time : 1623485431894
+Start finding data.
+query-370 starts at time : 1623485432966
+Start finding data.
+Finish.
+query-367 ends at time : 1623485433460
+query-371 starts at time : 1623485433916
+Start finding data.
+Finish.
+query-368 ends at time : 1623485434494
+query-372 starts at time : 1623485434961
+Start finding data.
+Finish.
+query-369 ends at time : 1623485435739
+query-373 starts at time : 1623485435972
+Start finding data.
+Finish.
+query-370 ends at time : 1623485436131
+query-374 starts at time : 1623485436916
+Start finding data.
+Finish.
+query-371 ends at time : 1623485437845
+query-375 starts at time : 1623485437914
+Start finding data.
+query-376 starts at time : 1623485438866
+Start finding data.
+Finish.
+query-372 ends at time : 1623485438984
+Finish.
+query-373 ends at time : 1623485439473
+query-377 starts at time : 1623485439872
+Start finding data.
+Finish.
+query-374 ends at time : 1623485440664
+query-378 starts at time : 1623485440866
+Start finding data.
+Finish.
+query-375 ends at time : 1623485441824
+query-379 starts at time : 1623485442408
+Start finding data.
+Finish.
+query-376 ends at time : 1623485443167
+Finish.
+query-377 ends at time : 1623485443335
+query-380 starts at time : 1623485443908
+Start finding data.
+Finish.
+query-378 ends at time : 1623485444413
+query-381 starts at time : 1623485445169
+Start finding data.
+Finish.
+query-379 ends at time : 1623485445183
+query-382 starts at time : 1623485445918
+Start finding data.
+Finish.
+query-380 ends at time : 1623485446512
+query-383 starts at time : 1623485446958
+Start finding data.
+Finish.
+query-381 ends at time : 1623485447547
+query-384 starts at time : 1623485448168
+Start finding data.
+Finish.
+query-382 ends at time : 1623485448538
+query-385 starts at time : 1623485449258
+Start finding data.
+Finish.
+query-383 ends at time : 1623485449456
+Finish.
+query-384 ends at time : 1623485450745
+query-386 starts at time : 1623485451060
+Start finding data.
+Finish.
+query-385 ends at time : 1623485451183
+query-387 starts at time : 1623485451868
+Start finding data.
+Finish.
+query-386 ends at time : 1623485452792
+query-388 starts at time : 1623485452872
+Start finding data.
+Finish.
+query-387 ends at time : 1623485453966
+query-389 starts at time : 1623485454058
+Start finding data.
+Finish.
+query-388 ends at time : 1623485454836
+query-390 starts at time : 1623485454916
+Start finding data.
+query-391 starts at time : 1623485455875
+Start finding data.
+Finish.
+query-389 ends at time : 1623485456288
+query-392 starts at time : 1623485457116
+Start finding data.
+Finish.
+query-390 ends at time : 1623485457692
+query-393 starts at time : 1623485458060
+Start finding data.
+query-394 starts at time : 1623485458874
+Start finding data.
+Finish.
+query-391 ends at time : 1623485459478
+query-395 starts at time : 1623485459868
+Start finding data.
+query-396 starts at time : 1623485460908
+Start finding data.
+Finish.
+query-392 ends at time : 1623485461719
+Finish.
+query-393 ends at time : 1623485461789
+query-397 starts at time : 1623485462072
+Start finding data.
+query-398 starts at time : 1623485462916
+Start finding data.
+Finish.
+query-394 ends at time : 1623485463584
+query-399 starts at time : 1623485463920
+Start finding data.
+query-400 starts at time : 1623485464866
+Start finding data.
+Finish.
+query-395 ends at time : 1623485465578
+query-401 starts at time : 1623485465868
+Start finding data.
+Finish.
+query-396 ends at time : 1623485465992
+query-402 starts at time : 1623485466930
+Start finding data.
+Finish.
+query-397 ends at time : 1623485467326
+query-403 starts at time : 1623485467867
+Start finding data.
+Finish.
+query-398 ends at time : 1623485468270
+query-404 starts at time : 1623485468874
+Start finding data.
+Finish.
+query-399 ends at time : 1623485469781
+query-405 starts at time : 1623485470021
+Start finding data.
+Finish.
+query-400 ends at time : 1623485470060
+Finish.
+query-401 ends at time : 1623485470663
+query-406 starts at time : 1623485470866
+Start finding data.
+Finish.
+query-402 ends at time : 1623485471174
+Finish.
+query-403 ends at time : 1623485472275
+query-407 starts at time : 1623485472294
+Start finding data.
+Finish.
+query-404 ends at time : 1623485473383
+Finish.
+query-405 ends at time : 1623485473387
+Finish.
+query-406 ends at time : 1623485474016
+query-408 starts at time : 1623485474032
+Start finding data.
+Finish.
+query-407 ends at time : 1623485474616
+query-409 starts at time : 1623485475170
+Start finding data.
+Finish.
+query-408 ends at time : 1623485475300
+query-410 starts at time : 1623485476018
+Start finding data.
+Finish.
+query-409 ends at time : 1623485476265
+query-411 starts at time : 1623485476972
+Start finding data.
+Finish.
+query-410 ends at time : 1623485477214
+Finish.
+query-411 ends at time : 1623485478183
+query-412 starts at time : 1623485478198
+Start finding data.
+query-413 starts at time : 1623485478972
+Start finding data.
+Finish.
+query-412 ends at time : 1623485479484
+query-414 starts at time : 1623485479868
+Start finding data.
+Finish.
+query-413 ends at time : 1623485480544
+query-415 starts at time : 1623485481076
+Start finding data.
+Finish.
+query-414 ends at time : 1623485481443
+query-416 starts at time : 1623485481876
+Start finding data.
+Finish.
+query-415 ends at time : 1623485482663
+Finish.
+query-416 ends at time : 1623485483251
+query-417 starts at time : 1623485483272
+Start finding data.
+query-418 starts at time : 1623485483868
+Start finding data.
+Finish.
+query-417 ends at time : 1623485484462
+query-419 starts at time : 1623485484874
+Start finding data.
+Finish.
+query-418 ends at time : 1623485485473
+Finish.
+query-419 ends at time : 1623485486106
+query-420 starts at time : 1623485486126
+Start finding data.
+Finish.
+query-420 ends at time : 1623485487044
+query-421 starts at time : 1623485487062
+Start finding data.
+query-422 starts at time : 1623485487918
+Start finding data.
+Finish.
+query-421 ends at time : 1623485488092
+modify-48 starts at time: 1623485488462
+modify-48 ends at time: 1623485488469
+query-423 starts at time : 1623485488870
+Start finding data.
+Finish.
+query-422 ends at time : 1623485488945
+Finish.
+query-423 ends at time : 1623485489812
+query-424 starts at time : 1623485489922
+Start finding data.
+query-425 starts at time : 1623485490875
+Start finding data.
+Finish.
+query-424 ends at time : 1623485490918
+Finish.
+query-425 ends at time : 1623485491837
+query-426 starts at time : 1623485491872
+Start finding data.
+Finish.
+query-426 ends at time : 1623485492819
+query-427 starts at time : 1623485492928
+Start finding data.
+Finish.
+query-427 ends at time : 1623485493860
+query-428 starts at time : 1623485493872
+Start finding data.
+query-429 starts at time : 1623485494912
+Start finding data.
+Finish.
+query-428 ends at time : 1623485494946
+Finish.
+query-429 ends at time : 1623485495866
+query-430 starts at time : 1623485495884
+Start finding data.
+Finish.
+query-430 ends at time : 1623485496780
+query-431 starts at time : 1623485496923
+Start finding data.
+query-432 starts at time : 1623485497496
+Start finding data.
+query-433 starts at time : 1623485498076
+Start finding data.
+Finish.
+query-431 ends at time : 1623485498167
+query-434 starts at time : 1623485498638
+Start finding data.
+query-435 starts at time : 1623485499216
+Start finding data.
+Finish.
+query-432 ends at time : 1623485499726
+query-436 starts at time : 1623485499768
+Start finding data.
+query-437 starts at time : 1623485500332
+Start finding data.
+query-438 starts at time : 1623485500900
+Start finding data.
+Finish.
+query-433 ends at time : 1623485501449
+query-439 starts at time : 1623485501480
+Start finding data.
+query-440 starts at time : 1623485502042
+Start finding data.
+Finish.
+query-434 ends at time : 1623485502584
+query-441 starts at time : 1623485502620
+Start finding data.
+query-442 starts at time : 1623485503188
+Start finding data.
+query-443 starts at time : 1623485503744
+Start finding data.
+Finish.
+query-435 ends at time : 1623485504038
+query-444 starts at time : 1623485504300
+Start finding data.
+query-445 starts at time : 1623485504858
+Start finding data.
+query-446 starts at time : 1623485505414
+Start finding data.
+query-447 starts at time : 1623485505973
+Start finding data.
+Finish.
+query-436 ends at time : 1623485506156
+query-448 starts at time : 1623485506524
+Start finding data.
+query-449 starts at time : 1623485507081
+Start finding data.
+Finish.
+query-437 ends at time : 1623485507135
+query-450 starts at time : 1623485507632
+Start finding data.
+query-451 starts at time : 1623485508193
+Start finding data.
+Finish.
+query-438 ends at time : 1623485508299
+query-452 starts at time : 1623485508735
+Start finding data.
+query-453 starts at time : 1623485509287
+Start finding data.
+Finish.
+query-439 ends at time : 1623485509307
+query-454 starts at time : 1623485509838
+Start finding data.
+Finish.
+query-440 ends at time : 1623485510342
+query-455 starts at time : 1623485510386
+Start finding data.
+query-456 starts at time : 1623485510936
+Start finding data.
+Finish.
+query-441 ends at time : 1623485511083
+query-457 starts at time : 1623485511478
+Start finding data.
+query-458 starts at time : 1623485512022
+Start finding data.
+Finish.
+query-442 ends at time : 1623485512208
+query-459 starts at time : 1623485512570
+Start finding data.
+Finish.
+query-443 ends at time : 1623485512761
+Finish.
+query-444 ends at time : 1623485512996
+query-460 starts at time : 1623485513870
+Start finding data.
+Finish.
+query-445 ends at time : 1623485514179
+query-461 starts at time : 1623485514872
+Start finding data.
+Finish.
+query-446 ends at time : 1623485515288
+query-462 starts at time : 1623485515868
+Start finding data.
+Finish.
+query-447 ends at time : 1623485516494
+query-463 starts at time : 1623485516868
+Start finding data.
+Finish.
+query-448 ends at time : 1623485517446
+query-464 starts at time : 1623485517868
+Start finding data.
+Finish.
+query-449 ends at time : 1623485518573
+query-465 starts at time : 1623485518868
+Start finding data.
+Finish.
+query-450 ends at time : 1623485518903
+Finish.
+query-451 ends at time : 1623485519759
+query-466 starts at time : 1623485519869
+Start finding data.
+Finish.
+query-452 ends at time : 1623485521146
+query-467 starts at time : 1623485521160
+Start finding data.
+Finish.
+query-453 ends at time : 1623485521663
+Finish.
+query-454 ends at time : 1623485521752
+modify-49 starts at time: 1623485522422
+modify-49 ends at time: 1623485522425
+query-468 starts at time : 1623485522518
+Start finding data.
+Finish.
+query-455 ends at time : 1623485523285
+query-469 starts at time : 1623485523866
+Start finding data.
+Finish.
+query-456 ends at time : 1623485524399
+query-470 starts at time : 1623485524910
+Start finding data.
+Finish.
+query-457 ends at time : 1623485525757
+Finish.
+query-458 ends at time : 1623485526481
+query-471 starts at time : 1623485526558
+Start finding data.
+Finish.
+query-459 ends at time : 1623485527796
+Finish.
+query-460 ends at time : 1623485527814
+query-472 starts at time : 1623485528066
+Start finding data.
+Finish.
+query-461 ends at time : 1623485528697
+query-473 starts at time : 1623485529118
+Start finding data.
+query-474 starts at time : 1623485530108
+Start finding data.
+Finish.
+query-462 ends at time : 1623485530184
+Finish.
+query-463 ends at time : 1623485531135
+query-475 starts at time : 1623485531164
+Start finding data.
+Finish.
+query-464 ends at time : 1623485531572
+query-476 starts at time : 1623485532221
+Start finding data.
+query-477 starts at time : 1623485532866
+Start finding data.
+Finish.
+query-465 ends at time : 1623485533036
+Finish.
+query-466 ends at time : 1623485534199
+query-478 starts at time : 1623485534464
+Start finding data.
+query-479 starts at time : 1623485534866
+Start finding data.
+Finish.
+query-467 ends at time : 1623485535179
+Finish.
+query-468 ends at time : 1623485535286
+Finish.
+query-469 ends at time : 1623485536514
+query-480 starts at time : 1623485536552
+Start finding data.
+Finish.
+query-470 ends at time : 1623485537106
+Finish.
+query-471 ends at time : 1623485537306
+query-481 starts at time : 1623485538516
+Start finding data.
+Finish.
+query-472 ends at time : 1623485539436
+query-482 starts at time : 1623485539873
+Start finding data.
+Finish.
+query-473 ends at time : 1623485540094
+Finish.
+query-474 ends at time : 1623485540510
+query-483 starts at time : 1623485541310
+Start finding data.
+query-484 starts at time : 1623485541872
+Start finding data.
+Finish.
+query-475 ends at time : 1623485542425
+Finish.
+query-476 ends at time : 1623485542985
+query-485 starts at time : 1623485543002
+Start finding data.
+Finish.
+query-477 ends at time : 1623485543035
+Finish.
+query-478 ends at time : 1623485543136
+query-486 starts at time : 1623485544466
+Start finding data.
+Finish.
+query-479 ends at time : 1623485545856
+query-487 starts at time : 1623485545876
+Start finding data.
+Finish.
+query-480 ends at time : 1623485546330
+query-488 starts at time : 1623485546876
+Start finding data.
+Finish.
+query-481 ends at time : 1623485547279
+Finish.
+query-482 ends at time : 1623485547331
+Finish.
+query-483 ends at time : 1623485547928
+query-489 starts at time : 1623485547950
+Start finding data.
+Finish.
+query-484 ends at time : 1623485548480
+query-490 starts at time : 1623485548870
+Start finding data.
+Finish.
+query-485 ends at time : 1623485548953
+Finish.
+query-486 ends at time : 1623485549762
+query-491 starts at time : 1623485549868
+Start finding data.
+Finish.
+query-487 ends at time : 1623485551218
+query-492 starts at time : 1623485551234
+Start finding data.
+Finish.
+query-488 ends at time : 1623485551438
+Finish.
+query-489 ends at time : 1623485551812
+query-493 starts at time : 1623485551880
+Start finding data.
+Finish.
+query-490 ends at time : 1623485552988
+query-494 starts at time : 1623485553024
+Start finding data.
+query-495 starts at time : 1623485553878
+Start finding data.
+Finish.
+query-491 ends at time : 1623485554296
+Finish.
+query-492 ends at time : 1623485555023
+query-496 starts at time : 1623485555076
+Start finding data.
+Finish.
+query-493 ends at time : 1623485555335
+query-497 starts at time : 1623485555868
+Start finding data.
+query-498 starts at time : 1623485556870
+Start finding data.
+Finish.
+query-494 ends at time : 1623485557181
+Finish.
+query-495 ends at time : 1623485557301
+query-499 starts at time : 1623485557962
+Start finding data.
+Finish.
+query-496 ends at time : 1623485558192
+query-500 starts at time : 1623485558885
+Start finding data.
+Finish.
+query-497 ends at time : 1623485559612
+query-501 starts at time : 1623485559970
+Start finding data.
+Finish.
+query-498 ends at time : 1623485560719
+Finish.
+query-499 ends at time : 1623485560969
+query-502 starts at time : 1623485560990
+Start finding data.
+Finish.
+query-500 ends at time : 1623485562137
+query-503 starts at time : 1623485562158
+Start finding data.
+Finish.
+query-501 ends at time : 1623485562527
+Finish.
+query-502 ends at time : 1623485563555
+query-504 starts at time : 1623485563720
+Start finding data.
+Finish.
+query-503 ends at time : 1623485564101
+Finish.
+query-504 ends at time : 1623485564830
+query-505 starts at time : 1623485564874
+Start finding data.
+Finish.
+query-505 ends at time : 1623485565822
+query-506 starts at time : 1623485565981
+Start finding data.
+query-507 starts at time : 1623485566876
+Start finding data.
+Finish.
+query-506 ends at time : 1623485566937
+Finish.
+query-507 ends at time : 1623485567837
+query-508 starts at time : 1623485567912
+Start finding data.
+Finish.
+query-508 ends at time : 1623485568822
+query-509 starts at time : 1623485568876
+Start finding data.
+Finish.
+query-509 ends at time : 1623485569955
+query-510 starts at time : 1623485570004
+Start finding data.
+Finish.
+query-510 ends at time : 1623485570896
+query-511 starts at time : 1623485570912
+Start finding data.
+Finish.
+query-511 ends at time : 1623485571828
+query-512 starts at time : 1623485571994
+Start finding data.
+query-513 starts at time : 1623485572868
+Start finding data.
+Finish.
+query-512 ends at time : 1623485572981
+Finish.
+query-513 ends at time : 1623485573869
+query-514 starts at time : 1623485573890
+Start finding data.
+Finish.
+query-514 ends at time : 1623485574795
+query-515 starts at time : 1623485574968
+Start finding data.
+Finish.
+query-515 ends at time : 1623485575876
+query-516 starts at time : 1623485575910
+Start finding data.
+Finish.
+query-516 ends at time : 1623485576819
+query-517 starts at time : 1623485576869
+Start finding data.
+Finish.
+query-517 ends at time : 1623485577803
+query-518 starts at time : 1623485579210
+Start finding data.
+query-519 starts at time : 1623485580017
+Start finding data.
+Finish.
+query-518 ends at time : 1623485580208
+query-520 starts at time : 1623485580868
+Start finding data.
+Finish.
+query-519 ends at time : 1623485581111
+query-521 starts at time : 1623485581870
+Start finding data.
+Finish.
+query-520 ends at time : 1623485581914
+Finish.
+query-521 ends at time : 1623485582820
+query-522 starts at time : 1623485582912
+Start finding data.
+Finish.
+query-522 ends at time : 1623485583906
+query-523 starts at time : 1623485583920
+Start finding data.
+Finish.
+query-523 ends at time : 1623485584832
+query-524 starts at time : 1623485584882
+Start finding data.
+Finish.
+query-524 ends at time : 1623485585803
+query-525 starts at time : 1623485585870
+Start finding data.
+Finish.
+query-525 ends at time : 1623485586761
+query-526 starts at time : 1623485586872
+Start finding data.
+query-527 starts at time : 1623485587876
+Start finding data.
+Finish.
+query-526 ends at time : 1623485588006
+Finish.
+query-527 ends at time : 1623485588859
+query-528 starts at time : 1623485588870
+Start finding data.
+Finish.
+query-528 ends at time : 1623485589774
+query-529 starts at time : 1623485590068
+Start finding data.
+Finish.
+query-529 ends at time : 1623485590956
+query-530 starts at time : 1623485591016
+Start finding data.
+Finish.
+query-530 ends at time : 1623485591920
+query-531 starts at time : 1623485591932
+Start finding data.
+query-532 starts at time : 1623485592868
+Start finding data.
+Finish.
+query-531 ends at time : 1623485592882
+Finish.
+query-532 ends at time : 1623485593814
+query-533 starts at time : 1623485593913
+Start finding data.
+Finish.
+query-533 ends at time : 1623485594840
+query-534 starts at time : 1623485594918
+Start finding data.
+Finish.
+query-534 ends at time : 1623485595813
+query-535 starts at time : 1623485595926
+Start finding data.
+Finish.
+query-535 ends at time : 1623485597020
+query-536 starts at time : 1623485597036
+Start finding data.
+Finish.
+query-536 ends at time : 1623485598030
+query-537 starts at time : 1623485598050
+Start finding data.
+Finish.
+query-537 ends at time : 1623485599151
+query-538 starts at time : 1623485599212
+Start finding data.
+query-539 starts at time : 1623485599916
+Start finding data.
+Finish.
+query-538 ends at time : 1623485600494
+Finish.
+query-539 ends at time : 1623485601139
+query-540 starts at time : 1623485601404
+Start finding data.
+query-541 starts at time : 1623485601870
+Start finding data.
+Finish.
+query-540 ends at time : 1623485602760
+query-542 starts at time : 1623485603074
+Start finding data.
+Finish.
+query-541 ends at time : 1623485603477
+query-543 starts at time : 1623485604174
+Start finding data.
+Finish.
+query-542 ends at time : 1623485604249
+Finish.
+query-543 ends at time : 1623485605112
+query-544 starts at time : 1623485605132
+Start finding data.
+query-545 starts at time : 1623485605916
+Start finding data.
+Finish.
+query-544 ends at time : 1623485606131
+Finish.
+query-545 ends at time : 1623485606926
+query-546 starts at time : 1623485606940
+Start finding data.
+Finish.
+query-546 ends at time : 1623485607862
+query-547 starts at time : 1623485607870
+Start finding data.
+Finish.
+query-547 ends at time : 1623485608799
+query-548 starts at time : 1623485608916
+Start finding data.
+Finish.
+query-548 ends at time : 1623485609835
+query-549 starts at time : 1623485609922
+Start finding data.
+Finish.
+query-549 ends at time : 1623485610818
+query-550 starts at time : 1623485611028
+Start finding data.
+query-551 starts at time : 1623485611874
+Start finding data.
+Finish.
+query-550 ends at time : 1623485612007
+query-552 starts at time : 1623485612870
+Start finding data.
+Finish.
+query-551 ends at time : 1623485612877
+Finish.
+query-552 ends at time : 1623485613837
+query-553 starts at time : 1623485613930
+Start finding data.
+Finish.
+query-553 ends at time : 1623485614859
+query-554 starts at time : 1623485614972
+Start finding data.
+Finish.
+query-554 ends at time : 1623485615861
+query-555 starts at time : 1623485615872
+Start finding data.
+Finish.
+query-555 ends at time : 1623485616807
+query-556 starts at time : 1623485617178
+Start finding data.
+query-557 starts at time : 1623485617876
+Start finding data.
+Finish.
+query-556 ends at time : 1623485618314
+Finish.
+query-557 ends at time : 1623485619195
+query-558 starts at time : 1623485619208
+Start finding data.
+query-559 starts at time : 1623485620064
+Start finding data.
+Finish.
+query-558 ends at time : 1623485620140
+query-560 starts at time : 1623485620968
+Start finding data.
+Finish.
+query-559 ends at time : 1623485621042
+query-561 starts at time : 1623485621926
+Start finding data.
+Finish.
+query-560 ends at time : 1623485621998
+Finish.
+query-561 ends at time : 1623485622883
+query-562 starts at time : 1623485622894
+Start finding data.
+query-563 starts at time : 1623485623872
+Start finding data.
+Finish.
+query-562 ends at time : 1623485624014
+Finish.
+query-563 ends at time : 1623485624868
+query-564 starts at time : 1623485625535
+Start finding data.
+query-565 starts at time : 1623485625872
+Start finding data.
+query-566 starts at time : 1623485626884
+Start finding data.
+Finish.
+query-564 ends at time : 1623485627030
+Finish.
+query-565 ends at time : 1623485627660
+query-567 starts at time : 1623485628077
+Start finding data.
+Finish.
+query-566 ends at time : 1623485628357
+Finish.
+query-567 ends at time : 1623485629140
+query-568 starts at time : 1623485629154
+Start finding data.
+query-569 starts at time : 1623485629902
+Start finding data.
+Finish.
+query-568 ends at time : 1623485630210
+Finish.
+query-569 ends at time : 1623485630967
+query-570 starts at time : 1623485631136
+Start finding data.
+Finish.
+query-570 ends at time : 1623485632054
+query-571 starts at time : 1623485632072
+Start finding data.
+query-572 starts at time : 1623485632922
+Start finding data.
+Finish.
+query-571 ends at time : 1623485633069
+query-573 starts at time : 1623485633870
+Start finding data.
+Finish.
+query-572 ends at time : 1623485633996
+Finish.
+query-573 ends at time : 1623485634859
+query-574 starts at time : 1623485634872
+Start finding data.
+Finish.
+query-574 ends at time : 1623485635800
+query-575 starts at time : 1623485636154
+Start finding data.
+query-576 starts at time : 1623485636872
+Start finding data.
+Finish.
+query-575 ends at time : 1623485637246
+query-577 starts at time : 1623485637872
+Start finding data.
+Finish.
+query-576 ends at time : 1623485638090
+Finish.
+query-577 ends at time : 1623485638983
+query-578 starts at time : 1623485639106
+Start finding data.
+query-579 starts at time : 1623485639924
+Start finding data.
+Finish.
+query-578 ends at time : 1623485640137
+Finish.
+query-579 ends at time : 1623485640955
+query-580 starts at time : 1623485641069
+Start finding data.
+Finish.
+query-580 ends at time : 1623485641992
+query-581 starts at time : 1623485642101
+Start finding data.
+query-582 starts at time : 1623485642870
+Start finding data.
+Finish.
+query-581 ends at time : 1623485643227
+Finish.
+query-582 ends at time : 1623485643976
+query-583 starts at time : 1623485643996
+Start finding data.
+Finish.
+query-583 ends at time : 1623485644906
+query-584 starts at time : 1623485644952
+Start finding data.
+Finish.
+query-584 ends at time : 1623485645848
+query-585 starts at time : 1623485645870
+Start finding data.
+Finish.
+query-585 ends at time : 1623485646771
+query-586 starts at time : 1623485647012
+Start finding data.
+query-587 starts at time : 1623485647872
+Start finding data.
+Finish.
+query-586 ends at time : 1623485648019
+query-588 starts at time : 1623485648872
+Start finding data.
+Finish.
+query-587 ends at time : 1623485648880
+Finish.
+query-588 ends at time : 1623485649863
+query-589 starts at time : 1623485649872
+Start finding data.
+Finish.
+query-589 ends at time : 1623485650784
+query-590 starts at time : 1623485651076
+Start finding data.
+query-591 starts at time : 1623485651924
+Start finding data.
+Finish.
+query-590 ends at time : 1623485652213
+query-592 starts at time : 1623485653012
+Start finding data.
+Finish.
+query-591 ends at time : 1623485653017
+query-593 starts at time : 1623485653876
+Start finding data.
+Finish.
+query-592 ends at time : 1623485653969
+Finish.
+query-593 ends at time : 1623485654829
+query-594 starts at time : 1623485654940
+Start finding data.
+Finish.
+query-594 ends at time : 1623485655845
+query-595 starts at time : 1623485655920
+Start finding data.
+Finish.
+query-595 ends at time : 1623485656866
+query-596 starts at time : 1623485656882
+Start finding data.
+Finish.
+query-596 ends at time : 1623485657864
+query-597 starts at time : 1623485657876
+Start finding data.
+Finish.
+query-597 ends at time : 1623485658816
+query-598 starts at time : 1623485659026
+Start finding data.
+Finish.
+query-598 ends at time : 1623485659917
+query-599 starts at time : 1623485659929
+Start finding data.
+Finish.
+query-599 ends at time : 1623485660860
+query-600 starts at time : 1623485660872
+Start finding data.
+Finish.
+query-600 ends at time : 1623485661758
+query-601 starts at time : 1623485662116
+Start finding data.
+Finish.
+query-601 ends at time : 1623485663253
+query-602 starts at time : 1623485663273
+Start finding data.
+query-603 starts at time : 1623485663868
+Start finding data.
+Finish.
+query-602 ends at time : 1623485664653
+Finish.
+query-603 ends at time : 1623485665247
+query-604 starts at time : 1623485665268
+Start finding data.
+Finish.
+query-604 ends at time : 1623485666317
+query-605 starts at time : 1623485666460
+Start finding data.
+query-606 starts at time : 1623485666869
+Start finding data.
+Finish.
+query-605 ends at time : 1623485667933
+query-607 starts at time : 1623485668028
+Start finding data.
+Finish.
+query-606 ends at time : 1623485668574
+query-608 starts at time : 1623485668876
+Start finding data.
+Finish.
+query-607 ends at time : 1623485669495
+Finish.
+query-608 ends at time : 1623485670082
+query-609 starts at time : 1623485670102
+Start finding data.
+Finish.
+query-609 ends at time : 1623485671008
+query-610 starts at time : 1623485671145
+Start finding data.
+query-611 starts at time : 1623485671870
+Start finding data.
+Finish.
+query-610 ends at time : 1623485672217
+query-612 starts at time : 1623485672925
+Start finding data.
+Finish.
+query-611 ends at time : 1623485673021
+Finish.
+query-612 ends at time : 1623485673885
+query-613 starts at time : 1623485673896
+Start finding data.
+Finish.
+query-613 ends at time : 1623485674798
+query-614 starts at time : 1623485674910
+Start finding data.
+Finish.
+query-614 ends at time : 1623485675819
+query-615 starts at time : 1623485675916
+Start finding data.
+query-616 starts at time : 1623485676312
+Start finding data.
+query-617 starts at time : 1623485676690
+Start finding data.
+query-618 starts at time : 1623485677084
+Start finding data.
+query-619 starts at time : 1623485677874
+Start finding data.
+Finish.
+query-615 ends at time : 1623485678207
+query-620 starts at time : 1623485678878
+Start finding data.
+Finish.
+query-616 ends at time : 1623485678940
+query-621 starts at time : 1623485680191
+Start finding data.
+query-622 starts at time : 1623485680590
+Start finding data.
+Finish.
+query-617 ends at time : 1623485681375
+Finish.
+query-618 ends at time : 1623485681382
+Finish.
+query-619 ends at time : 1623485682162
+Finish.
+query-620 ends at time : 1623485682849
+query-623 starts at time : 1623485682921
+Start finding data.
+Finish.
+query-621 ends at time : 1623485683343
+query-624 starts at time : 1623485683362
+Start finding data.
+Finish.
+query-622 ends at time : 1623485684042
+Finish.
+query-623 ends at time : 1623485684948
+Finish.
+query-624 ends at time : 1623485685199
+query-625 starts at time : 1623485689024
+Start finding data.
+Finish.
+query-625 ends at time : 1623485689939
+query-626 starts at time : 1623485691576
+Start finding data.
+Finish.
+query-626 ends at time : 1623485692502
+query-627 starts at time : 1623485699717
+Start finding data.
+Finish.
+query-627 ends at time : 1623485700623
+query-628 starts at time : 1623485709265
+Start finding data.
+Finish.
+query-628 ends at time : 1623485710171
+query-629 starts at time : 1623485725514
+Start finding data.
+Finish.
+query-629 ends at time : 1623485726423
+query-630 starts at time : 1623485752024
+Start finding data.
+Finish.
+query-630 ends at time : 1623485752957
+query-631 starts at time : 1623485756380
+Start finding data.
+Finish.
+query-631 ends at time : 1623485757300
+modify-50 starts at time: 1623485793918
+modify-50 ends at time: 1623485793922
+query-632 starts at time : 1623485821716
+Start finding data.
+Finish.
+query-632 ends at time : 1623485822630
+query-633 starts at time : 1623485833966
+Start finding data.
+Finish.
+query-633 ends at time : 1623485834879
+query-634 starts at time : 1623485879701
+Start finding data.
+query-635 starts at time : 1623485880066
+Start finding data.
+query-636 starts at time : 1623485880441
+Start finding data.
+query-637 starts at time : 1623485880802
+Start finding data.
+query-638 starts at time : 1623485881168
+Start finding data.
+modify-51 starts at time: 1623485881238
+modify-51 ends at time: 1623485881241
+modify-52 starts at time: 1623485881526
+modify-52 ends at time: 1623485881528
+query-639 starts at time : 1623485881534
+Start finding data.
+Finish.
+query-634 ends at time : 1623485881766
+modify-53 starts at time: 1623485881829
+modify-53 ends at time: 1623485881832
+modify-54 starts at time: 1623485882146
+modify-54 ends at time: 1623485882148
+modify-55 starts at time: 1623485882424
+modify-55 ends at time: 1623485882426
+modify-56 starts at time: 1623485882724
+modify-56 ends at time: 1623485882726
+query-640 starts at time : 1623485882882
+Start finding data.
+modify-57 starts at time: 1623485883024
+modify-57 ends at time: 1623485883026
+modify-58 starts at time: 1623485883362
+modify-58 ends at time: 1623485883364
+modify-59 starts at time: 1623485883624
+modify-59 ends at time: 1623485883627
+query-641 starts at time : 1623485883864
+Start finding data.
+modify-60 starts at time: 1623485883926
+modify-60 ends at time: 1623485883928
+modify-61 starts at time: 1623485884226
+modify-61 ends at time: 1623485884230
+Finish.
+query-635 ends at time : 1623485884406
+modify-62 starts at time: 1623485884530
+modify-62 ends at time: 1623485884532
+modify-63 starts at time: 1623485884830
+modify-63 ends at time: 1623485884832
+modify-64 starts at time: 1623485885130
+modify-64 ends at time: 1623485885132
+query-642 starts at time : 1623485885314
+Start finding data.
+modify-65 starts at time: 1623485885442
+modify-65 ends at time: 1623485885444
+Finish.
+query-636 ends at time : 1623485885567
+query-643 starts at time : 1623485885670
+Start finding data.
+modify-66 starts at time: 1623485885978
+modify-66 ends at time: 1623485885980
+query-644 starts at time : 1623485886034
+Start finding data.
+Finish.
+query-637 ends at time : 1623485886263
+query-645 starts at time : 1623485886386
+Start finding data.
+query-646 starts at time : 1623485886742
+Start finding data.
+Finish.
+query-638 ends at time : 1623485886871
+modify-67 starts at time: 1623485886972
+modify-67 ends at time: 1623485886975
+query-647 starts at time : 1623485887102
+Start finding data.
+query-648 starts at time : 1623485887450
+Start finding data.
+query-649 starts at time : 1623485887808
+Start finding data.
+modify-68 starts at time: 1623485887934
+modify-68 ends at time: 1623485887936
+query-650 starts at time : 1623485888156
+Start finding data.
+Finish.
+query-639 ends at time : 1623485888443
+query-651 starts at time : 1623485888516
+Start finding data.
+modify-69 starts at time: 1623485888688
+modify-69 ends at time: 1623485888690
+query-652 starts at time : 1623485888862
+Start finding data.
+query-653 starts at time : 1623485889211
+Start finding data.
+query-654 starts at time : 1623485889558
+Start finding data.
+query-655 starts at time : 1623485889906
+Start finding data.
+query-656 starts at time : 1623485890252
+Start finding data.
+query-657 starts at time : 1623485890605
+Start finding data.
+Finish.
+query-640 ends at time : 1623485890872
+query-658 starts at time : 1623485890942
+Start finding data.
+query-659 starts at time : 1623485891294
+Start finding data.
+query-660 starts at time : 1623485891628
+Start finding data.
+Finish.
+query-641 ends at time : 1623485891802
+query-661 starts at time : 1623485891974
+Start finding data.
+query-662 starts at time : 1623485892312
+Start finding data.
+query-663 starts at time : 1623485892662
+Start finding data.
+query-664 starts at time : 1623485892990
+Start finding data.
+query-665 starts at time : 1623485893330
+Start finding data.
+query-666 starts at time : 1623485893665
+Start finding data.
+Finish.
+query-642 ends at time : 1623485893764
+modify-70 starts at time: 1623485893878
+modify-70 ends at time: 1623485893880
+query-667 starts at time : 1623485893998
+Start finding data.
+query-668 starts at time : 1623485894336
+Start finding data.
+Finish.
+query-643 ends at time : 1623485894472
+Finish.
+query-644 ends at time : 1623485894669
+query-669 starts at time : 1623485894670
+Start finding data.
+query-670 starts at time : 1623485895004
+Start finding data.
+query-671 starts at time : 1623485895350
+Start finding data.
+Finish.
+query-645 ends at time : 1623485895567
+query-672 starts at time : 1623485895676
+Start finding data.
+query-673 starts at time : 1623485896002
+Start finding data.
+Finish.
+query-646 ends at time : 1623485896055
+Finish.
+query-647 ends at time : 1623485896084
+query-674 starts at time : 1623485896327
+Start finding data.
+Finish.
+query-648 ends at time : 1623485896691
+Finish.
+query-649 ends at time : 1623485896704
+query-675 starts at time : 1623485896879
+Start finding data.
+modify-71 starts at time: 1623485897566
+modify-71 ends at time: 1623485897569
+query-676 starts at time : 1623485897876
+Start finding data.
+query-677 starts at time : 1623485898500
+Start finding data.
+query-678 starts at time : 1623485900186
+Start finding data.
+Finish.
+query-650 ends at time : 1623485900379
+Finish.
+query-651 ends at time : 1623485900722
+query-679 starts at time : 1623485902223
+Start finding data.
+modify-72 starts at time: 1623485902618
+modify-72 ends at time: 1623485902620
+Finish.
+query-652 ends at time : 1623485903704
+Finish.
+query-653 ends at time : 1623485904141
+Finish.
+query-654 ends at time : 1623485904435
+Finish.
+query-655 ends at time : 1623485904729
+query-680 starts at time : 1623485904748
+Start finding data.
+Finish.
+query-656 ends at time : 1623485905398
+Finish.
+query-657 ends at time : 1623485905519
+Finish.
+query-658 ends at time : 1623485905854
+Finish.
+query-659 ends at time : 1623485906146
+Finish.
+query-660 ends at time : 1623485908990
+Finish.
+query-661 ends at time : 1623485909531
+Finish.
+query-662 ends at time : 1623485912469
+query-681 starts at time : 1623485912518
+Start finding data.
+Finish.
+query-663 ends at time : 1623485913049
+Finish.
+query-664 ends at time : 1623485913186
+Finish.
+query-665 ends at time : 1623485913553
+Finish.
+query-666 ends at time : 1623485914564
+Finish.
+query-667 ends at time : 1623485914568
+Finish.
+query-668 ends at time : 1623485914675
+Finish.
+query-669 ends at time : 1623485914805
+modify-73 starts at time: 1623485917681
+modify-73 ends at time: 1623485917682
+Finish.
+query-670 ends at time : 1623485918181
+Finish.
+query-671 ends at time : 1623485918201
+query-682 starts at time : 1623485920998
+Start finding data.
+Finish.
+query-672 ends at time : 1623485921424
+Finish.
+query-673 ends at time : 1623485921905
+Finish.
+query-674 ends at time : 1623485922076
+Finish.
+query-675 ends at time : 1623485922762
+Finish.
+query-676 ends at time : 1623485923274
+Finish.
+query-677 ends at time : 1623485923401
+Finish.
+query-678 ends at time : 1623485923468
+Finish.
+query-679 ends at time : 1623485923636
+Finish.
+query-680 ends at time : 1623485924044
+Finish.
+query-681 ends at time : 1623485924491
+Finish.
+query-682 ends at time : 1623485924825
+modify-74 starts at time: 1623485934732
+modify-74 ends at time: 1623485934735
+query-683 starts at time : 1623485937074
+Start finding data.
+Finish.
+query-683 ends at time : 1623485938013
+modify-75 starts at time: 1623485941721
+modify-75 ends at time: 1623485941723
+query-684 starts at time : 1623485955080
+Start finding data.
+Finish.
+query-684 ends at time : 1623485956168
+modify-76 starts at time: 1623485975773
+modify-76 ends at time: 1623485975776
+modify-77 starts at time: 1623485983868
+modify-77 ends at time: 1623485983871
+query-685 starts at time : 1623485987624
+Start finding data.
+Finish.
+query-685 ends at time : 1623485988515
+query-686 starts at time : 1623486002122
+Start finding data.
+Finish.
+query-686 ends at time : 1623486003074
+query-687 starts at time : 1623486049256
+Start finding data.
+query-688 starts at time : 1623486049564
+Start finding data.
+query-689 starts at time : 1623486049875
+Start finding data.
+query-690 starts at time : 1623486050187
+Start finding data.
+query-691 starts at time : 1623486050504
+Start finding data.
+query-692 starts at time : 1623486050816
+Start finding data.
+query-693 starts at time : 1623486051130
+Start finding data.
+query-694 starts at time : 1623486051432
+Start finding data.
+query-695 starts at time : 1623486051742
+Start finding data.
+modify-78 starts at time: 1623486052036
+modify-78 ends at time: 1623486052038
+query-696 starts at time : 1623486052052
+Start finding data.
+query-697 starts at time : 1623486052352
+Start finding data.
+Finish.
+query-687 ends at time : 1623486052490
+query-698 starts at time : 1623486052656
+Start finding data.
+modify-79 starts at time: 1623486052762
+modify-79 ends at time: 1623486052764
+query-699 starts at time : 1623486052961
+Start finding data.
+modify-80 starts at time: 1623486053060
+modify-80 ends at time: 1623486053065
+modify-81 starts at time: 1623486053361
+modify-81 ends at time: 1623486053363
+modify-82 starts at time: 1623486053664
+modify-82 ends at time: 1623486053666
+query-700 starts at time : 1623486053726
+Start finding data.
+modify-83 starts at time: 1623486053961
+modify-83 ends at time: 1623486053963
+query-701 starts at time : 1623486054030
+Start finding data.
+Finish.
+query-688 ends at time : 1623486054149
+query-702 starts at time : 1623486054331
+Start finding data.
+query-703 starts at time : 1623486054632
+Start finding data.
+query-704 starts at time : 1623486054932
+Start finding data.
+modify-84 starts at time: 1623486054976
+modify-84 ends at time: 1623486054978
+query-705 starts at time : 1623486055224
+Start finding data.
+modify-85 starts at time: 1623486055439
+modify-85 ends at time: 1623486055440
+query-706 starts at time : 1623486055531
+Start finding data.
+query-707 starts at time : 1623486055825
+Start finding data.
+query-708 starts at time : 1623486056162
+Start finding data.
+query-709 starts at time : 1623486056414
+Start finding data.
+modify-86 starts at time: 1623486056444
+modify-86 ends at time: 1623486056446
+query-710 starts at time : 1623486056708
+Start finding data.
+query-711 starts at time : 1623486057000
+Start finding data.
+query-712 starts at time : 1623486057304
+Start finding data.
+Finish.
+query-689 ends at time : 1623486057401
+query-713 starts at time : 1623486057584
+Start finding data.
+query-714 starts at time : 1623486057870
+Start finding data.
+modify-87 starts at time: 1623486057886
+modify-87 ends at time: 1623486057889
+Finish.
+query-690 ends at time : 1623486058098
+Finish.
+query-691 ends at time : 1623486058453
+modify-88 starts at time: 1623486058779
+modify-88 ends at time: 1623486058781
+modify-89 starts at time: 1623486059083
+modify-89 ends at time: 1623486059085
+modify-90 starts at time: 1623486059395
+modify-90 ends at time: 1623486059397
+Finish.
+query-692 ends at time : 1623486059508
+Finish.
+query-693 ends at time : 1623486059898
+Finish.
+query-694 ends at time : 1623486059947
+Finish.
+query-695 ends at time : 1623486060158
+Finish.
+query-696 ends at time : 1623486061628
+Finish.
+query-697 ends at time : 1623486061678
+Finish.
+query-698 ends at time : 1623486063108
+Finish.
+query-699 ends at time : 1623486067012
+Finish.
+query-700 ends at time : 1623486067617
+Finish.
+query-701 ends at time : 1623486067679
+Finish.
+query-702 ends at time : 1623486068592
+Finish.
+query-703 ends at time : 1623486068666
+Finish.
+query-704 ends at time : 1623486069083
+Finish.
+query-705 ends at time : 1623486070003
+Finish.
+query-706 ends at time : 1623486071147
+Finish.
+query-707 ends at time : 1623486071366
+Finish.
+query-708 ends at time : 1623486071908
+Finish.
+query-709 ends at time : 1623486074016
+Finish.
+query-710 ends at time : 1623486074319
+Finish.
+query-711 ends at time : 1623486074340
+Finish.
+query-712 ends at time : 1623486074518
+Finish.
+query-713 ends at time : 1623486074645
+Finish.
+query-714 ends at time : 1623486074689

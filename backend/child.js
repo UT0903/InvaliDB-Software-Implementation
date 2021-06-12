@@ -26,9 +26,11 @@ process.on('message', (msg) => {
         const index = Object.values(id)[0];
         if (subscriptions.hasOwnProperty(`${index}`)) { // data is in it
             // console.log(`I am child${process.argv[2]}, I am ready to send"`)
-            subscriptions[index].data = change;
+            Object.entries(change).forEach(([key, value]) => {
+                subscriptions[index].data[key] = value;
+            });
             process.send(JSON.stringify([{
-                change,
+                change: subscriptions[index].data,
                 clients: subscriptions[index].subscribers
             }]));
         }
