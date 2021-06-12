@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import { Table, Input, InputNumber, Popconfirm, Form, Typography } from 'antd';
 import EditTable from "../Components/Table"
-const client = new WebSocket('ws://140.112.30.36:8080')
+const client = new WebSocket('ws://140.112.30.45:8080') //140.112.30.36
 
 const ChatRoom = ({ me, displayStatus }) => {
   /*const temp = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -24,10 +24,11 @@ const ChatRoom = ({ me, displayStatus }) => {
     console.log('recv data:', parsedd, typeof(parsedd), typeof(parsed))
     if(parsedd.type === "modify"){
       const newdata = data;
-      console.log(typeof(newdata))
+      //console.log(typeof(newdata))
       for(let i = 0; i < parsedd.body.length; i++){
-        console.log('body id', typeof(parsedd.body[i].Id))
-        const index = newdata.findIndex((item)=>(parsedd.body[i].Id === item.id))
+        console.log('modify id:', parsedd.body[i].id)
+        //console.log('body id', typeof(parsedd.body[i].Id))
+        const index = newdata.findIndex((item)=>(parsedd.body[i].id === item.Id))
         console.log('modify index', index)
         if(index !== -1){
           newdata[index].Id = parsedd.body[i].id
@@ -39,7 +40,7 @@ const ChatRoom = ({ me, displayStatus }) => {
           newdata[index].Ocuppation = parsedd.body[i].ocuppation
         }
       }
-      console.log(newdata)
+      //console.log(newdata)
       setData(newdata)
     }
     else{
@@ -97,14 +98,16 @@ const ChatRoom = ({ me, displayStatus }) => {
   }
   const testWrite = async ()=>{
     const modify = () => {
+      const newId = String(getRandomInt());
       return {
         type: "modify",
         body: {
           id: {
-            id: String(getRandomInt())
+            id: newId
           },
           change: {
-            gender: (getRandomInt() % 2 === 0)?"M":"F"
+            id: newId,
+            gender: (getRandomInt() % 2 === 0)?"M":"F",
           }
         }
       }
