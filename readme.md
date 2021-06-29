@@ -1,6 +1,6 @@
 # **InvaliDB Software Implementation**
 
-**Original Auther:**  
+**Original Author:**  
 Wolfram Wingerath, Felix Gessert, and Norbert Ritter 
 
 **Original Paper Reference:**  
