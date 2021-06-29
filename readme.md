@@ -4,7 +4,7 @@
 ##### b07902014 蔡承濬 b07902048 李宥霆 b07902124 鄭世朋 b07901043 沈信樺
 
 ## 0. **Reproduce**
-> // for frontend 
+> // for frontend   
 > cd frontend; yarn install; yarn start;
 > // for backend
 > cd backend; yarn install; node index.js;
