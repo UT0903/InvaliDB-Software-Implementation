@@ -1,12 +1,14 @@
-**InvaliDB Implementation**
+#**InvaliDB Implementation**
 
-Group7
+##### Group7
+##### b07902014 蔡承濬 b07902048 李宥霆 b07902124 鄭世朋 b07901043 沈信樺
 
-b07902014 蔡承濬 b07902048 李宥霆
-
-b07902124 鄭世朋 b07901043 沈信樺
-
-1.  **INTRODUCTION**
+## 0. **Reproduce**
+> // for frontend 
+> cd frontend; yarn install; yarn start;
+> // for backend
+> cd backend; yarn install; node index.js;
+## 1.  **INTRODUCTION**
 
 In the generation network has become indispensable. Performing online
 shopping or bank operations is fairly normal in our daily life. However,

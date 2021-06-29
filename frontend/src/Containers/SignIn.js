@@ -4,7 +4,7 @@ import {UserOutlined} from "@ant-design/icons"
 
 const SignIn = ({ me, setMe, setSignedIn, displayStatus }) => (
     <>
-      <div className="App-title"><h1>My Chat Room</h1></div>
+      <div className="App-title"><h1>Database Final</h1></div>
       <Input.Search
         prefix={<UserOutlined />}
         value={me}
